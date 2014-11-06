@@ -1,1 +1,8 @@
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe.config
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe.config
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.pdb
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.Properties.Resources.resources
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.csproj.GenerateResource.Cache
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
