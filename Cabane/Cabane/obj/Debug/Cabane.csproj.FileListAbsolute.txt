@@ -6,3 +6,4 @@ C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.Prope
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.csproj.GenerateResource.Cache
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
+C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmInscription.resources

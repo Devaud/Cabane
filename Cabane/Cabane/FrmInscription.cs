@@ -16,5 +16,10 @@ namespace Cabane
         {
             InitializeComponent();
         }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
