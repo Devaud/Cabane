@@ -7,3 +7,12 @@ C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.cspro
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmInscription.resources
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe.config
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\bin\Debug\Cabane.pdb
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.csprojResolveAssemblyReference.cache
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmInscription.resources
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.Properties.Resources.resources
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.csproj.GenerateResource.Cache
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
+C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
