@@ -16,3 +16,13 @@ C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.Properties.R
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.csproj.GenerateResource.Cache
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe.config
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\bin\Debug\Cabane.pdb
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.csprojResolveAssemblyReference.cache
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmInscription.resources
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.Properties.Resources.resources
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.csproj.GenerateResource.Cache
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmGestionCabane.resources
