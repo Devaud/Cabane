@@ -37,3 +37,4 @@ C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Caban
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb
 C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmCabane.resources
+E:\CFPT\2014-2015\Atelier Programmation\gestionCabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmCabane.resources

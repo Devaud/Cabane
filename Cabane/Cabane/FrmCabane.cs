@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Cabane
 {
+    
     public partial class FrmCabane : Form
     {
-       
+        
 
         public FrmCabane()
         {
@@ -23,7 +24,14 @@ namespace Cabane
         {
             manipdb db = new manipdb(); 
 
-            label1.Text = db.connexion("127.0.0.1", "root", "myblogdb");
+            label1.Text = db.connexion("127.0.0.1", "root", "kyjk_cabaneGroupeB", "");
+        }
+
+        private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGestionCabane gestion = new FrmGestionCabane();
+            gestion.Show(this);
+            this.Hide();
         }
     }
 }
