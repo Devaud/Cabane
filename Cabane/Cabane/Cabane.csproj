@@ -63,6 +63,12 @@
     <Compile Include="FrmInscription.Designer.cs">
       <DependentUpon>FrmInscription.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListeCabane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListeCabane.Designer.cs">
+      <DependentUpon>FrmListeCabane.cs</DependentUpon>
+    </Compile>
     <Compile Include="manipdb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscription.resx">
       <DependentUpon>FrmInscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListeCabane.resx">
+      <DependentUpon>FrmListeCabane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
