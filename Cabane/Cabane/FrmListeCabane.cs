@@ -27,9 +27,10 @@ namespace Cabane
         {
             manipdb db = new manipdb();
 
-            FrmListeCabane.ActiveForm.Text = db.connexion("127.0.0.1", "root", "cabanes", "");
+            //FrmListeCabane.ActiveForm.Text = 
+            db.connexion("127.0.0.1", "root", "cabanes", "");
             db.List_nom_cabannes();
-            db.close();
+            db.fermer();
 
         }
     }

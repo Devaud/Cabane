@@ -33,9 +33,9 @@ namespace Cabane
             if (TBnom.Text != "" && TBadresse.Text != "" && TBaltitude.Text != "" && TBlocalite.Text != "" && TBnpa.Text != "" && TBprix.Text != "")
             {
                 manipdb db = new manipdb();
-                MySqlConnection var = new MySqlConnection();
+                //MySqlConnection var = new MySqlConnection();
                 
-                db.connexion("127.0.0.1", "root", "cabanes", "");
+                db.connexion("127.0.0.1", "root", "cabanes");
 
                 
 
@@ -62,7 +62,7 @@ namespace Cabane
 
 
                 result = db.ajoutCabane(nom, adresse, photo, localite, npa, nbLits, prix, altitude, douche);
-                db.close();
+                db.fermer();
             }
         }
 

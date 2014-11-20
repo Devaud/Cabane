@@ -44,7 +44,7 @@ namespace Cabane
             {
                 db.connexion(server, uid, database);
                 db.setUser(prenom, nom, pseudo, mdp, email, telephone);
-                db.close();
+                db.fermer();
 
                 this.Close();
             }

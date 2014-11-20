@@ -42,7 +42,7 @@ namespace Cabane
             }
         }
 
-        public void close()
+        public void fermer()
         {
             conn.Close();
         }
