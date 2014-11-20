@@ -40,3 +40,6 @@ C:\Users\DEVAUDA_INFO\Desktop\Cabane\Cabane\Cabane\Cabane\Cabane\obj\Debug\Caban
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmCabane.resources
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmGestionCabane.resources
 C:\Users\SANTOSB_INFO\Desktop\Cabane\Cabane\Cabane\obj\Debug\Cabane.FrmListeCabane.resources
+C:\Users\PISANELLOA_INFO\Desktop\Cabanes\Cabane\Cabane\Cabane\bin\Debug\Cabane.exe.config
+C:\Users\PISANELLOA_INFO\Desktop\Cabanes\Cabane\Cabane\Cabane\obj\Debug\Cabane.exe
+C:\Users\PISANELLOA_INFO\Desktop\Cabanes\Cabane\Cabane\Cabane\obj\Debug\Cabane.pdb

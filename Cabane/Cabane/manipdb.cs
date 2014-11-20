@@ -110,6 +110,27 @@ namespace Cabane
             {
                 MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Login(string pseudo, string mdp)
+        {
+            try
+            {
+
+                SQL = "SELECT idPersonne FROM personnes WHERE pseudo='" + pseudo + "' AND mdp='" + mdp + "';";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                rdr = cmd.ExecuteReader();
+
+            }
+            catch(MySqlException e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
             return str;
         }
 
