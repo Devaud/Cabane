@@ -45,7 +45,14 @@ namespace Cabane
                 db.connexion(server, uid, database);
                 db.setUser(prenom, nom, pseudo, mdp, email, telephone);
                 db.close();
+
+                this.Close();
             }
+        }
+
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
