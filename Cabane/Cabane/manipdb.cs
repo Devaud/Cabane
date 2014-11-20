@@ -83,5 +83,17 @@ namespace Cabane
            }
 
        }
+
+        public List<String> List_nom_cabannes()
+        {
+
+        }
+
+        public List<String> List_nom_cabannes()
+        {
+
+        }
     }
+
+    
 }

@@ -46,14 +46,15 @@
             this.lbxCabanes.TabIndex = 0;
             this.lbxCabanes.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // Form1
+            // FrmListeCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.lbxCabanes);
-            this.Name = "Form1";
+            this.Name = "FrmListeCabane";
             this.Text = "Liste des cabanes";
+            this.Load += new System.EventHandler(this.FrmListeCabane_Load);
             this.ResumeLayout(false);
 
         }

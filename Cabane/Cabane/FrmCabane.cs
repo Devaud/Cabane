@@ -23,10 +23,13 @@ namespace Cabane
         private void FrmCabane_Load(object sender, EventArgs e)
         {
 
+            label1.Text = db.connexion("127.0.0.1", "root", "cabanes");
         }
 
+<<<<<<< Updated upstream
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
+ 
             FrmGestionCabane gestion = new FrmGestionCabane();
             gestion.Show(this);
             this.Hide();
