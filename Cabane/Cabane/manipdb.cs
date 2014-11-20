@@ -95,6 +95,13 @@ namespace Cabane
                 cmd.Connection = this.conn;
                 cmd.CommandText = SQL;
                 cmd.ExecuteNonQuery();
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    str.Add(rdr.GetString(0));
+                 
+                }
             }
 
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -102,11 +109,6 @@ namespace Cabane
                 MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return str;
-        }
-
-        public void close()
-        {
-            conn.Close();
         }
 
 

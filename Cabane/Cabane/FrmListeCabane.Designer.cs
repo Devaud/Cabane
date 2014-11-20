@@ -57,7 +57,7 @@
             this.Name = "FrmListeCabane";
             this.Text = "Liste des cabanes";
             this.Load += new System.EventHandler(this.FrmListeCabane_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
 
         }

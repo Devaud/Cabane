@@ -33,6 +33,7 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeDesCabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionCabaneToolStripMenuItem,
-            this.inscriptionToolStripMenuItem});
+            this.inscriptionToolStripMenuItem,
+            this.listeDesCabanesToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
@@ -67,16 +69,23 @@
             // gestionCabaneToolStripMenuItem
             // 
             this.gestionCabaneToolStripMenuItem.Name = "gestionCabaneToolStripMenuItem";
-            this.gestionCabaneToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.gestionCabaneToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.gestionCabaneToolStripMenuItem.Text = "Gestion cabane";
             this.gestionCabaneToolStripMenuItem.Click += new System.EventHandler(this.gestionCabaneToolStripMenuItem_Click);
             // 
             // inscriptionToolStripMenuItem
             // 
             this.inscriptionToolStripMenuItem.Name = "inscriptionToolStripMenuItem";
-            this.inscriptionToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.inscriptionToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.inscriptionToolStripMenuItem.Text = "Inscription";
             this.inscriptionToolStripMenuItem.Click += new System.EventHandler(this.inscriptionToolStripMenuItem_Click);
+            // 
+            // listeDesCabanesToolStripMenuItem
+            // 
+            this.listeDesCabanesToolStripMenuItem.Name = "listeDesCabanesToolStripMenuItem";
+            this.listeDesCabanesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.listeDesCabanesToolStripMenuItem.Text = "Liste des cabanes";
+            this.listeDesCabanesToolStripMenuItem.Click += new System.EventHandler(this.listeDesCabanesToolStripMenuItem_Click);
             // 
             // FrmCabane
             // 
@@ -103,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeDesCabanesToolStripMenuItem;
     }
 }
 
