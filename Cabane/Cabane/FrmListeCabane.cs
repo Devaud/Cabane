@@ -29,7 +29,7 @@ namespace Cabane
 
             db.connexion(server, uid, database);
             str = db.List_nom_cabannes();
-            db.close();
+            db.fermer();
 
             while (str.Count() != i)
             {
@@ -45,8 +45,6 @@ namespace Cabane
 
         private void FrmListeCabane_Load(object sender, EventArgs e)
         {
-            
-            db.connexion("127.0.0.1", "root", "cabanes", "");
 
         }
     }
