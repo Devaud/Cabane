@@ -27,7 +27,7 @@ namespace Cabane
 
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
- 
+
             FrmGestionCabane gestion = new FrmGestionCabane();
             gestion.Show(this);
             this.Hide();

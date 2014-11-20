@@ -84,12 +84,11 @@ namespace Cabane
 
        }
 
-        public String[] List_nom_cabannes()
+        public List<String> List_nom_cabannes()
         {
-            string[] str = new List<string>();
+            List<String> str = new List<String>();
 
            
-
             try
             {
                 SQL = "select nom from cabane";
