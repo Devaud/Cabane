@@ -27,7 +27,7 @@ namespace Cabane
             rdr = null;
         }
 
-        public void connexion(string serveur, string uid, string database, string pwd = "")
+        public string connexion(string serveur, string uid, string database, string pwd = "")
         {
             try
             {
@@ -35,10 +35,12 @@ namespace Cabane
 
                 conn.ConnectionString = nomConnexion;
                 conn.Open();
+                return "Ok";
             }
             catch(MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
+                return "KO";
             }
         }
 
@@ -111,8 +113,47 @@ namespace Cabane
             return str;
         }
 
+        public List<String> afficheContact()
+            MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
+            MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
 
-    }
+            List<String> contacts = new List<String>();
+            string SQL;
+
+            conn.ConnectionString = "server=localhost; userid=root;password=;database=cabanes;";
+            conn.Open();
+
+
+
+            try
+            {
+
+                SQL = "SELECT nom,prenom,telephone,email,siteWeb FROM contact";
+                cmd.Connection = conn;
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    contacts.Add(reader.GetFieldValue<String>(0) + ' ' + reader.GetFieldValue<String>(1));
+                    //i++;
+                }
+                return contacts;              
+                
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+     }
 
     
 }

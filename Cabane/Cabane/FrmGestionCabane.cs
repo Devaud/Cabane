@@ -70,5 +70,12 @@ namespace Cabane
         {
             this.Owner.Show();
         }
+
+        private void contactsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmContacts contact = new FrmContacts();
+            contact.Show(this);
+            this.Hide();
+        }
     }
 }
