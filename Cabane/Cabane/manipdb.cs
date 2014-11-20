@@ -62,7 +62,7 @@ namespace Cabane
                 MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
        public bool ajoutCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
        {
            try
@@ -84,15 +84,33 @@ namespace Cabane
 
        }
 
-        public List<String> List_nom_cabannes()
+        public String[] List_nom_cabannes()
         {
+            string[] str = new List<string>();
 
+           
+
+            try
+            {
+                SQL = "select nom from cabane";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return str;
         }
 
-        public List<String> List_nom_cabannes()
+        public void close()
         {
-
+            conn.Close();
         }
+
+
     }
 
     

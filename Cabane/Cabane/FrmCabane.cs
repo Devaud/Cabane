@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace Cabane
 {
-    
     public partial class FrmCabane : Form
     {
-        
+       
 
         public FrmCabane()
         {
@@ -23,10 +22,9 @@ namespace Cabane
         private void FrmCabane_Load(object sender, EventArgs e)
         {
 
-            label1.Text = db.connexion("127.0.0.1", "root", "cabanes");
+            label1.Text = db.connexion("127.0.0.1", "root", "cabanes", "");
         }
 
-<<<<<<< Updated upstream
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
  

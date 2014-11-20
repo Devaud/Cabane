@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.lbxCabanes = new System.Windows.Forms.ListBox();
+            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbxCabanes
@@ -55,6 +57,7 @@
             this.Name = "FrmListeCabane";
             this.Text = "Liste des cabanes";
             this.Load += new System.EventHandler(this.FrmListeCabane_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -62,5 +65,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox lbxCabanes;
+        private System.Diagnostics.PerformanceCounter performanceCounter1;
     }
 }
