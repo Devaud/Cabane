@@ -35,7 +35,7 @@ namespace Cabane
                 manipdb db = new manipdb();
                 MySqlConnection var = new MySqlConnection();
                 
-                db.connexion("127.0.0.1", "root", "kyjk_cabaneGroupeB", "");
+                db.connexion("127.0.0.1", "root", "cabanes", "");
 
                 
 
@@ -62,6 +62,7 @@ namespace Cabane
 
 
                 result = db.ajoutCabane(nom, adresse, photo, localite, npa, nbLits, prix, altitude, douche);
+                db.close();
             }
         }
 

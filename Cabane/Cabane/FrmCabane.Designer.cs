@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionCabaneToolStripMenuItem});
+            this.gestionCabaneToolStripMenuItem,
+            this.inscriptionToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
@@ -68,6 +70,13 @@
             this.gestionCabaneToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.gestionCabaneToolStripMenuItem.Text = "Gestion cabane";
             this.gestionCabaneToolStripMenuItem.Click += new System.EventHandler(this.gestionCabaneToolStripMenuItem_Click);
+            // 
+            // inscriptionToolStripMenuItem
+            // 
+            this.inscriptionToolStripMenuItem.Name = "inscriptionToolStripMenuItem";
+            this.inscriptionToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.inscriptionToolStripMenuItem.Text = "Inscription";
+            this.inscriptionToolStripMenuItem.Click += new System.EventHandler(this.inscriptionToolStripMenuItem_Click);
             // 
             // FrmCabane
             // 
@@ -93,6 +102,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inscriptionToolStripMenuItem;
     }
 }
 

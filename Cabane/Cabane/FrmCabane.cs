@@ -22,9 +22,7 @@ namespace Cabane
 
         private void FrmCabane_Load(object sender, EventArgs e)
         {
-            manipdb db = new manipdb(); 
 
-            label1.Text = db.connexion("127.0.0.1", "root", "kyjk_cabaneGroupeB", "");
         }
 
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,6 +30,12 @@ namespace Cabane
             FrmGestionCabane gestion = new FrmGestionCabane();
             gestion.Show(this);
             this.Hide();
+        }
+
+        private void inscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInscription ins = new FrmInscription();
+            ins.Show(this);
         }
     }
 }

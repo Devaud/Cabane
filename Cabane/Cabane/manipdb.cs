@@ -18,51 +18,16 @@ namespace Cabane
         private MySqlCommand cmd; // Objet qui permet de faire une requete
         private MySqlDataAdapter MyAdapter;
         private String nomConnexion;
+        private string SQL;
 
         public manipdb()
         {
             conn = new MySqlConnection();
-
+            cmd = new MySqlCommand();
             rdr = null;
         }
 
-        public bool ajoutCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
-        {
-            MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
-
-            string SQL;
-
-            conn.ConnectionString = "server=localhost; userid=root;password=;database=kyjk_cabaneGroupeB;";
-            conn.Open();
-
-
-
-            try
-            {
-
-                SQL = "insert into cabane(nom,adresse,photo,localite,NPA,nbLits,prixNuit,altitude,douches) values('"+nom+"', '"+adresse+"', '"+photo+"','"+localite+"','"+npa+"','"+nbLits+"','"+prix+"','"+altitude+"','"+douche+"')";
-                cmd.Connection = conn;
-                cmd.CommandText = SQL;
-                cmd.ExecuteNonQuery();
-
-
-
-
-                conn.Close();
-                return true; 
-            }
-
-                
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            
-        }
-
-        public string connexion(string serveur, string uid, string database, string pwd)
+        public void connexion(string serveur, string uid, string database, string pwd = "")
         {
             try
             {
@@ -70,12 +35,53 @@ namespace Cabane
 
                 conn.ConnectionString = nomConnexion;
                 conn.Open();
-                return "Ok";
             }
             catch(MySqlException ex)
             {
-                return ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
+
+        public void close()
+        {
+            conn.Close();
+        }
+
+       public void setUser(string prenom, string nom, string pseudo, string mdp, string email, string telephone)
+        {
+            try
+            {
+                SQL = "insert into personnes(pseudo,mdp,nom,prenom,email,telephone) values('" + pseudo + "', '" + mdp + "', '" + nom + "','" + prenom + "','" + email + "','" + telephone + "')";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+       public bool ajoutCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
+       {
+           try
+           {
+
+               SQL = "insert into cabane(nom,adresse,photo,localite,NPA,nbLits,prixNuit,altitude,douches) values('" + nom + "', '" + adresse + "', '" + photo + "','" + localite + "','" + npa + "','" + nbLits + "','" + prix + "','" + altitude + "','" + douche + "')";
+               cmd.Connection = this.conn;
+               cmd.CommandText = SQL;
+               cmd.ExecuteNonQuery();
+               return true;
+           }
+
+
+           catch (MySql.Data.MySqlClient.MySqlException ex)
+           {
+               MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               return false;
+           }
+
+       }
     }
 }
