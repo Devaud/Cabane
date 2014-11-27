@@ -58,8 +58,18 @@ namespace Cabane
             }
             else
             {
-                //ecrire bonjour avec le nom du user
+                tbx_pseudo.Visible = false;
+                label3.Visible = false;
+                tbx_pwd.Visible = false;
+                btn_login.Visible = false;
+
+                lbl_pseudo.Text = "Pseudo USER"; //Nom du user recupere des la base
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

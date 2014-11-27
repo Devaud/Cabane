@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbx_pwd = new System.Windows.Forms.TextBox();
             this.tbx_pseudo = new System.Windows.Forms.TextBox();
+            this.lbl_pseudo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbx_pwd);
             this.groupBox1.Controls.Add(this.tbx_pseudo);
+            this.groupBox1.Controls.Add(this.lbl_pseudo);
             this.groupBox1.Location = new System.Drawing.Point(316, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(202, 105);
@@ -117,10 +119,10 @@
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(65, 71);
+            this.btn_login.Location = new System.Drawing.Point(65, 74);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 23);
-            this.btn_login.TabIndex = 7;
+            this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
@@ -149,14 +151,26 @@
             this.tbx_pwd.Name = "tbx_pwd";
             this.tbx_pwd.PasswordChar = '*';
             this.tbx_pwd.Size = new System.Drawing.Size(100, 20);
-            this.tbx_pwd.TabIndex = 4;
+            this.tbx_pwd.TabIndex = 2;
+            this.tbx_pwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbx_pseudo
             // 
             this.tbx_pseudo.Location = new System.Drawing.Point(91, 19);
             this.tbx_pseudo.Name = "tbx_pseudo";
             this.tbx_pseudo.Size = new System.Drawing.Size(100, 20);
-            this.tbx_pseudo.TabIndex = 3;
+            this.tbx_pseudo.TabIndex = 1;
+            this.tbx_pseudo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbl_pseudo
+            // 
+            this.lbl_pseudo.Location = new System.Drawing.Point(88, 22);
+            this.lbl_pseudo.Name = "lbl_pseudo";
+            this.lbl_pseudo.Size = new System.Drawing.Size(103, 13);
+            this.lbl_pseudo.TabIndex = 8;
+            this.lbl_pseudo.Text = "Pseudo";
+            this.lbl_pseudo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_pseudo.Click += new System.EventHandler(this.label4_Click);
             // 
             // FrmCabane
             // 
@@ -168,7 +182,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmCabane";
-            this.Text = "Form1";
+            this.Text = "Cabanes - Groupe B";
             this.Load += new System.EventHandler(this.FrmCabane_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -194,6 +208,7 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_pseudo;
     }
 }
 
