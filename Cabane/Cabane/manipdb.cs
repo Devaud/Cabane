@@ -29,6 +29,8 @@ namespace Cabane
 
         public string connexion(string serveur, string uid, string database, string pwd = "")
         {
+            MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
+            MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
             try
             {
                 nomConnexion = "server="+serveur+";uid="+uid+";pwd="+pwd+";database="+database+";";
@@ -51,6 +53,8 @@ namespace Cabane
 
        public void setUser(string prenom, string nom, string pseudo, string mdp, string email, string telephone)
         {
+            
+
             try
             {
                 SQL = "insert into personnes(pseudo,mdp,nom,prenom,email,telephone) values('" + pseudo + "', '" + mdp + "', '" + nom + "','" + prenom + "','" + email + "','" + telephone + "')";
@@ -67,6 +71,8 @@ namespace Cabane
         
        public bool ajoutCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
        {
+           
+
            try
            {
 
@@ -134,9 +140,8 @@ namespace Cabane
             return str;
         }
 
-        public List<String> afficheContact()
-            MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+        public List<String> afficheContact(){
+          
 
             List<String> contacts = new List<String>();
             string SQL;
@@ -152,7 +157,7 @@ namespace Cabane
                 SQL = "SELECT nom,prenom,telephone,email,siteWeb FROM contact";
                 cmd.Connection = conn;
                 cmd.CommandText = SQL;
-                cmd.ExecuteNonQuery();
+               cmd.ExecuteNonQuery();
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -161,7 +166,7 @@ namespace Cabane
                     contacts.Add(reader.GetFieldValue<String>(0) + ' ' + reader.GetFieldValue<String>(1));
                     //i++;
                 }
-                return contacts;              
+                return contacts;      
                 
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -172,6 +177,7 @@ namespace Cabane
             finally
             {
                 conn.Close();
+                
             }
         }
      }
