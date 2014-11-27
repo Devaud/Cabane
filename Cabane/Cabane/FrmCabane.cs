@@ -47,10 +47,19 @@ namespace Cabane
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            int id_user = 0;
 
             db.connexion("127.0.0.1", "root", "cabanes", "");
-            db.Login(tbx_pseudo.Text, tbx_pwd.Text);
-            db.fermer();
+            id_user = db.Login(tbx_pseudo.Text, tbx_pwd.Text);
+
+            if(id_user == -1)
+            {
+                MessageBox.Show("Pseudo faux ou MDP faux", "Login Echoué", MessageBoxButtons.OK);
+            }
+            else
+            {
+                //ecrire bonjour avec le nom du user
+            }
         }
 
     }

@@ -32,16 +32,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesCabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            /*this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();*/
+            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbx_pwd = new System.Windows.Forms.TextBox();
             this.tbx_pseudo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_login = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,8 +95,13 @@
             this.listeDesCabanesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.listeDesCabanesToolStripMenuItem.Text = "Liste des cabanes";
             this.listeDesCabanesToolStripMenuItem.Click += new System.EventHandler(this.listeDesCabanesToolStripMenuItem_Click);
-            
-           // groupBox1
+            // 
+            // connexionToolStripMenuItem
+            // 
+            this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
+            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            // 
+            // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_login);
             this.groupBox1.Controls.Add(this.label3);
@@ -110,38 +114,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
-           
-            // tbx_pwd
-            // 
-            this.tbx_pwd.Location = new System.Drawing.Point(91, 45);
-            this.tbx_pwd.Name = "tbx_pwd";
-            this.tbx_pwd.Size = new System.Drawing.Size(100, 20);
-            this.tbx_pwd.TabIndex = 4;
-            // 
-            // tbx_pseudo
-            // 
-            this.tbx_pseudo.Location = new System.Drawing.Point(91, 19);
-            this.tbx_pseudo.Name = "tbx_pseudo";
-            this.tbx_pseudo.Size = new System.Drawing.Size(100, 20);
-            this.tbx_pseudo.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pseudo";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Mot de passe :";
             // 
             // btn_login
             // 
@@ -152,6 +124,39 @@
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Mot de passe :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Pseudo";
+            // 
+            // tbx_pwd
+            // 
+            this.tbx_pwd.Location = new System.Drawing.Point(91, 45);
+            this.tbx_pwd.Name = "tbx_pwd";
+            this.tbx_pwd.PasswordChar = '*';
+            this.tbx_pwd.Size = new System.Drawing.Size(100, 20);
+            this.tbx_pwd.TabIndex = 4;
+            // 
+            // tbx_pseudo
+            // 
+            this.tbx_pseudo.Location = new System.Drawing.Point(91, 19);
+            this.tbx_pseudo.Name = "tbx_pseudo";
+            this.tbx_pseudo.Size = new System.Drawing.Size(100, 20);
+            this.tbx_pseudo.TabIndex = 3;
             // 
             // FrmCabane
             // 

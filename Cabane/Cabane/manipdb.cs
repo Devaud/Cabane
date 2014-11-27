@@ -118,8 +118,9 @@ namespace Cabane
             }
         }
 
-        public void Login(string pseudo, string mdp)
+        public int Login(string pseudo, string mdp)
         {
+            int result = -1;   
             try
             {
                 
@@ -127,6 +128,11 @@ namespace Cabane
                 cmd.Connection = this.conn;
                 cmd.CommandText = SQL;
                 rdr = cmd.ExecuteReader();
+
+                while(rdr.Read())
+                {
+                    result = Convert.ToInt32(rdr.GetString(0));
+                }
 
             }
             catch(MySqlException e)
@@ -137,7 +143,8 @@ namespace Cabane
             {
                 conn.Close();
             }
-            
+
+            return result;
         }
 
         public List<String> afficheContact(){
