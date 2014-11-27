@@ -47,5 +47,15 @@ namespace Cabane
         {
 
         }
+
+        private void tbxRecherche_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbxRecherche_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
     }
 }
