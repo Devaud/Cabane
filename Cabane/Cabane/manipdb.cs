@@ -16,7 +16,6 @@ namespace Cabane
         private MySqlConnection conn; //Objet de connexion a la db
         private MySqlDataReader rdr; // Objet pour lire les informations retournée par une requete
         private MySqlCommand cmd; // Objet qui permet de faire une requete
-        private MySqlDataAdapter MyAdapter;
         private String nomConnexion;
         private string SQL;
 
@@ -27,22 +26,22 @@ namespace Cabane
             rdr = null;
         }
 
-        public string connexion(string serveur, string uid, string database, string pwd = "")
+        public void connexion(string serveur, string uid, string database, string pwd = "")
         {
-            MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection();
-            MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand();
+            conn = new MySql.Data.MySqlClient.MySqlConnection();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand();
             try
             {
                 nomConnexion = "server="+serveur+";uid="+uid+";pwd="+pwd+";database="+database+";";
 
                 conn.ConnectionString = nomConnexion;
                 conn.Open();
-                return "Ok";
+                
             }
             catch(MySqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                return "KO";
+                
             }
         }
 
@@ -123,7 +122,7 @@ namespace Cabane
         {
             try
             {
-
+                
                 SQL = "SELECT idPersonne FROM personnes WHERE pseudo='" + pseudo + "' AND mdp='" + mdp + "';";
                 cmd.Connection = this.conn;
                 cmd.CommandText = SQL;
@@ -149,8 +148,6 @@ namespace Cabane
 
             conn.ConnectionString = "server=localhost; userid=root;password=;database=cabanes;";
             conn.Open();
-
-
 
             try
             {

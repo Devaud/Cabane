@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Cabane
 {
@@ -22,7 +22,6 @@ namespace Cabane
         private void FrmCabane_Load(object sender, EventArgs e)
         {
             
-            label1.Text = db.connexion("127.0.0.1", "root", "cabanes", "");
         }
 
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +48,7 @@ namespace Cabane
         private void btn_login_Click(object sender, EventArgs e)
         {
 
-            string conn = db.connexion("127.0.0.1", "root", "cabanes", "");
+            db.connexion("127.0.0.1", "root", "cabanes", "");
             db.Login(tbx_pseudo.Text, tbx_pwd.Text);
             db.fermer();
         }
