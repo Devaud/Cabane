@@ -33,7 +33,9 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.inscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeDesCabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            /*this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();*/
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbx_pwd = new System.Windows.Forms.TextBox();
             this.tbx_pseudo = new System.Windows.Forms.TextBox();
@@ -94,14 +96,21 @@
             this.listeDesCabanesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.listeDesCabanesToolStripMenuItem.Text = "Liste des cabanes";
             this.listeDesCabanesToolStripMenuItem.Click += new System.EventHandler(this.listeDesCabanesToolStripMenuItem_Click);
+            
+           // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_login);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbx_pwd);
+            this.groupBox1.Controls.Add(this.tbx_pseudo);
             this.groupBox1.Location = new System.Drawing.Point(316, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(202, 105);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
-            // 
+           
             // tbx_pwd
             // 
             this.tbx_pwd.Location = new System.Drawing.Point(91, 45);
@@ -173,6 +182,7 @@
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeDesCabanesToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbx_pwd;
         private System.Windows.Forms.TextBox tbx_pseudo;
         private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;

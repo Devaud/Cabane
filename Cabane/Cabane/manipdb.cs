@@ -110,11 +110,12 @@ namespace Cabane
                     str.Add(rdr.GetString(0));
                  
                 }
+                return str;
             }
-
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
 
@@ -137,7 +138,7 @@ namespace Cabane
             {
                 conn.Close();
             }
-            return str;
+            
         }
 
         public List<String> afficheContact(){

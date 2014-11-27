@@ -48,11 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrmListeContacts.cs">
-    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+      <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmListeContacts.Designer.cs">
       <DependentUpon>FrmListeContacts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConnexion.Designer.cs">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
@@ -85,6 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmListeContacts.resx">
       <DependentUpon>FrmListeContacts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>

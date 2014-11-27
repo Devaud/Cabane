@@ -43,7 +43,16 @@ namespace Cabane
         {
             FrmListeCabane ins = new FrmListeCabane();
             ins.Show(this);
-            db.Login(tbx_pseudo.Text, tbx_pwd.Text);
+           
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+            string conn = db.connexion("127.0.0.1", "root", "cabanes", "");
+            db.Login(tbx_pseudo.Text, tbx_pwd.Text);
+            db.fermer();
+        }
+
     }
 }
