@@ -140,6 +140,7 @@
             this.BtnAnnuler.TabIndex = 10;
             this.BtnAnnuler.Text = "Annuler";
             this.BtnAnnuler.UseVisualStyleBackColor = true;
+            this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // BtnAjouter
             // 

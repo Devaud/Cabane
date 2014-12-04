@@ -32,6 +32,7 @@ namespace Cabane
 
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
+            // Déclaration et affectation des variables
             manipdb db = new manipdb();
             string nom, prenom, email, tel, website;
 
@@ -46,6 +47,7 @@ namespace Cabane
                 website = null;
             }
 
+            // Gestion avec la base de données
             db.connexion(server, uid, database);
             if (db.addContact(nom, prenom, email, tel, website))
             {
@@ -62,10 +64,13 @@ namespace Cabane
 
         private void TBXNom_TextChanged(object sender, EventArgs e)
         {
+            // Récupère le nombre d'élément se trouvant dans la liste
             int ListSize = TBXList.Count;
+
+            // Boucle pour parcourir tout les éléments de la liste
             for (int i = 0; i < ListSize; i++)
             {
-                TextBox tbx = TBXList[i];
+                TextBox tbx = TBXList[i]; // Récupère l'élément à la position i
                 if (tbx.Text == "")
                 {
                     BtnAjouter.Enabled = false;
@@ -76,6 +81,11 @@ namespace Cabane
                 }
             }
             
+        }
+
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
