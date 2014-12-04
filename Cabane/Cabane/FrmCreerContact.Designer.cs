@@ -103,6 +103,7 @@
             this.TBXPrenom.Name = "TBXPrenom";
             this.TBXPrenom.Size = new System.Drawing.Size(117, 20);
             this.TBXPrenom.TabIndex = 6;
+            this.TBXPrenom.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // TBXEmail
             // 
@@ -111,6 +112,7 @@
             this.TBXEmail.Name = "TBXEmail";
             this.TBXEmail.Size = new System.Drawing.Size(117, 20);
             this.TBXEmail.TabIndex = 7;
+            this.TBXEmail.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // TBXTel
             // 
@@ -119,6 +121,7 @@
             this.TBXTel.Name = "TBXTel";
             this.TBXTel.Size = new System.Drawing.Size(117, 20);
             this.TBXTel.TabIndex = 8;
+            this.TBXTel.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // TBXSiteWeb
             // 
@@ -127,6 +130,7 @@
             this.TBXSiteWeb.Name = "TBXSiteWeb";
             this.TBXSiteWeb.Size = new System.Drawing.Size(117, 20);
             this.TBXSiteWeb.TabIndex = 9;
+            this.TBXSiteWeb.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // BtnAnnuler
             // 
@@ -139,6 +143,7 @@
             // 
             // BtnAjouter
             // 
+            this.BtnAjouter.Enabled = false;
             this.BtnAjouter.Location = new System.Drawing.Point(117, 153);
             this.BtnAjouter.Name = "BtnAjouter";
             this.BtnAjouter.Size = new System.Drawing.Size(75, 23);

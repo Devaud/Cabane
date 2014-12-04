@@ -13,6 +13,7 @@ namespace Cabane
     public partial class FrmCreerContact : Form
     {
         string server, uid, database;
+        List<TextBox> TBXList = new List<TextBox>();
 
         public FrmCreerContact()
         {
@@ -21,6 +22,12 @@ namespace Cabane
             server = "127.0.0.1";
             uid = "root";
             database = "cabanes";
+
+            TBXList.Add(TBXNom);
+            TBXList.Add(TBXPrenom);
+            TBXList.Add(TBXEmail);
+            TBXList.Add(TBXTel);
+
         }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
@@ -55,6 +62,19 @@ namespace Cabane
 
         private void TBXNom_TextChanged(object sender, EventArgs e)
         {
+            int ListSize = TBXList.Count;
+            for (int i = 0; i < ListSize; i++)
+            {
+                TextBox tbx = TBXList[i];
+                if (tbx.Text == "")
+                {
+                    BtnAjouter.Enabled = false;
+                }
+                else
+                {
+                    BtnAjouter.Enabled = true;
+                }
+            }
             
         }
     }
