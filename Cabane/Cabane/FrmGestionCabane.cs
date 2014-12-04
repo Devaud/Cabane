@@ -61,7 +61,7 @@ namespace Cabane
                 var result = false;
 
 
-                result = db.ajoutCabane(nom, adresse, photo, localite, npa, nbLits, prix, altitude, douche);
+                result = db.addCabane(nom, adresse, photo, localite, npa, nbLits, prix, altitude, douche);
                 db.fermer();
             }
         }

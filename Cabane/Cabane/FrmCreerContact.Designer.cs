@@ -92,7 +92,7 @@
             this.TBXNom.Location = new System.Drawing.Point(75, 12);
             this.TBXNom.MaxLength = 50;
             this.TBXNom.Name = "TBXNom";
-            this.TBXNom.Size = new System.Drawing.Size(117, 20);
+            this.TBXNom.Size = new System.Drawing.Size(132, 20);
             this.TBXNom.TabIndex = 5;
             this.TBXNom.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
@@ -101,7 +101,7 @@
             this.TBXPrenom.Location = new System.Drawing.Point(75, 40);
             this.TBXPrenom.MaxLength = 50;
             this.TBXPrenom.Name = "TBXPrenom";
-            this.TBXPrenom.Size = new System.Drawing.Size(117, 20);
+            this.TBXPrenom.Size = new System.Drawing.Size(132, 20);
             this.TBXPrenom.TabIndex = 6;
             this.TBXPrenom.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
@@ -110,7 +110,7 @@
             this.TBXEmail.Location = new System.Drawing.Point(75, 67);
             this.TBXEmail.MaxLength = 50;
             this.TBXEmail.Name = "TBXEmail";
-            this.TBXEmail.Size = new System.Drawing.Size(117, 20);
+            this.TBXEmail.Size = new System.Drawing.Size(132, 20);
             this.TBXEmail.TabIndex = 7;
             this.TBXEmail.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
@@ -119,7 +119,7 @@
             this.TBXTel.Location = new System.Drawing.Point(75, 93);
             this.TBXTel.MaxLength = 50;
             this.TBXTel.Name = "TBXTel";
-            this.TBXTel.Size = new System.Drawing.Size(117, 20);
+            this.TBXTel.Size = new System.Drawing.Size(132, 20);
             this.TBXTel.TabIndex = 8;
             this.TBXTel.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
@@ -128,13 +128,13 @@
             this.TBXSiteWeb.Location = new System.Drawing.Point(75, 120);
             this.TBXSiteWeb.MaxLength = 50;
             this.TBXSiteWeb.Name = "TBXSiteWeb";
-            this.TBXSiteWeb.Size = new System.Drawing.Size(117, 20);
+            this.TBXSiteWeb.Size = new System.Drawing.Size(132, 20);
             this.TBXSiteWeb.TabIndex = 9;
             this.TBXSiteWeb.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(18, 153);
+            this.BtnAnnuler.Location = new System.Drawing.Point(23, 153);
             this.BtnAnnuler.Name = "BtnAnnuler";
             this.BtnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.BtnAnnuler.TabIndex = 10;
@@ -145,7 +145,7 @@
             // BtnAjouter
             // 
             this.BtnAjouter.Enabled = false;
-            this.BtnAjouter.Location = new System.Drawing.Point(117, 153);
+            this.BtnAjouter.Location = new System.Drawing.Point(132, 153);
             this.BtnAjouter.Name = "BtnAjouter";
             this.BtnAjouter.Size = new System.Drawing.Size(75, 23);
             this.BtnAjouter.TabIndex = 11;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(198, 188);
+            this.ClientSize = new System.Drawing.Size(219, 188);
             this.Controls.Add(this.BtnAjouter);
             this.Controls.Add(this.BtnAnnuler);
             this.Controls.Add(this.TBXSiteWeb);
@@ -170,7 +170,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FrmCreerContact";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajouter contact";
             this.ResumeLayout(false);
             this.PerformLayout();

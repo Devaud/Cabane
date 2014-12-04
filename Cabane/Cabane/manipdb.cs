@@ -68,7 +68,7 @@ namespace Cabane
             }
         }
         
-       public bool ajoutCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
+       public bool addCabane(string nom, string adresse, string photo, string localite, string npa, decimal nbLits, string prix, string altitude, bool douche)
        {
            
 
