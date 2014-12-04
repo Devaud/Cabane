@@ -117,6 +117,7 @@
             this.TBXPrenom.Name = "TBXPrenom";
             this.TBXPrenom.Size = new System.Drawing.Size(131, 20);
             this.TBXPrenom.TabIndex = 7;
+            this.TBXPrenom.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXNom
             // 
@@ -125,6 +126,7 @@
             this.TBXNom.Name = "TBXNom";
             this.TBXNom.Size = new System.Drawing.Size(131, 20);
             this.TBXNom.TabIndex = 8;
+            this.TBXNom.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXPseudo
             // 
@@ -133,6 +135,7 @@
             this.TBXPseudo.Name = "TBXPseudo";
             this.TBXPseudo.Size = new System.Drawing.Size(131, 20);
             this.TBXPseudo.TabIndex = 9;
+            this.TBXPseudo.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXMDP
             // 
@@ -141,6 +144,7 @@
             this.TBXMDP.Name = "TBXMDP";
             this.TBXMDP.Size = new System.Drawing.Size(131, 20);
             this.TBXMDP.TabIndex = 10;
+            this.TBXMDP.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXValideMDP
             // 
@@ -149,6 +153,7 @@
             this.TBXValideMDP.Name = "TBXValideMDP";
             this.TBXValideMDP.Size = new System.Drawing.Size(131, 20);
             this.TBXValideMDP.TabIndex = 11;
+            this.TBXValideMDP.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXEmail
             // 
@@ -157,6 +162,7 @@
             this.TBXEmail.Name = "TBXEmail";
             this.TBXEmail.Size = new System.Drawing.Size(131, 20);
             this.TBXEmail.TabIndex = 12;
+            this.TBXEmail.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // TBXTel
             // 
@@ -165,10 +171,12 @@
             this.TBXTel.Name = "TBXTel";
             this.TBXTel.Size = new System.Drawing.Size(131, 20);
             this.TBXTel.TabIndex = 13;
+            this.TBXTel.TextChanged += new System.EventHandler(this.TBXPrenom_TextChanged);
             // 
             // BtnValider
             // 
-            this.BtnValider.Location = new System.Drawing.Point(15, 190);
+            this.BtnValider.Enabled = false;
+            this.BtnValider.Location = new System.Drawing.Point(151, 190);
             this.BtnValider.Name = "BtnValider";
             this.BtnValider.Size = new System.Drawing.Size(109, 23);
             this.BtnValider.TabIndex = 14;
@@ -178,7 +186,7 @@
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(152, 190);
+            this.BtnAnnuler.Location = new System.Drawing.Point(12, 191);
             this.BtnAnnuler.Name = "BtnAnnuler";
             this.BtnAnnuler.Size = new System.Drawing.Size(109, 23);
             this.BtnAnnuler.TabIndex = 15;
