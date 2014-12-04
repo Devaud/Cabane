@@ -51,6 +51,7 @@
             this.TPmodifierCabane = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -282,6 +283,12 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
+            // deconnexionToolStripMenuItem
+            // 
+            this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deconnexionToolStripMenuItem.Text = "Deconnexion";
+            // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
@@ -302,14 +309,13 @@
             this.cabanesToolStripMenuItem.Name = "cabanesToolStripMenuItem";
             this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cabanesToolStripMenuItem.Text = "Cabanes";
+            this.cabanesToolStripMenuItem.Click += new System.EventHandler(this.cabanesToolStripMenuItem_Click);
             // 
             // contactsToolStripMenuItem
-            // 
             this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
             this.contactsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactsToolStripMenuItem.Text = "Contacts";
             this.contactsToolStripMenuItem.Click += new System.EventHandler(this.contactsToolStripMenuItem_Click);
-            // 
             // FrmGestionCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

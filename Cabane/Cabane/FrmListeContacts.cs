@@ -32,5 +32,12 @@ namespace Cabane
             }
 
         }
+
+        private void cabanesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListeCabane cabane = new FrmListeCabane();
+            cabane.Show(this);
+            this.Hide();
+        }
     }
 }

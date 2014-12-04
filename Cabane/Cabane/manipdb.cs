@@ -14,10 +14,11 @@ namespace Cabane
     class manipdb
     {
         private MySqlConnection conn; //Objet de connexion a la db
-        private MySqlDataReader rdr; // Objet pour lire les informations retournée par une requete
+        private MySqlDataReader rdr; // Objet pour lire les informations retourn�e par une requete
         private MySqlCommand cmd; // Objet qui permet de faire une requete
         private String nomConnexion;
         private string SQL;
+        public bool connected;
 
         /**
          * Constructor of manipdb
@@ -178,12 +179,17 @@ namespace Cabane
                 while(rdr.Read())
                 {
                     result = Convert.ToInt32(rdr.GetString(0));
+                    
+                    
                 }
-
+                connected = true;
             }
             catch(MySqlException e)
             {
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // Error message
+                connected = false;
+                
+                
             }
             finally
             {
@@ -191,6 +197,25 @@ namespace Cabane
             }
 
             return result;
+        }
+
+        public bool addContact(string nom, string prenom, string email, string tel, string siteweb = null)
+        {
+            try
+            {
+                SQL = "INSERT INTO contact (nom, prenom, email, telephone, siteWeb) VALUES ('" + nom + "', '" + prenom + "', '" + email + "', '" + tel + "', '" + siteweb + "')";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         /**

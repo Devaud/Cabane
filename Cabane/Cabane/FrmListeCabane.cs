@@ -78,5 +78,19 @@ namespace Cabane
                 i++;
             }
         }
+
+        private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGestionCabane cabane = new FrmGestionCabane();
+            cabane.Show(this);
+            this.Hide();
+        }
+
+        private void listeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmContacts contact = new FrmContacts();
+            contact.Show(this);
+            this.Hide();
+        }
     }
 }
