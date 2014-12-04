@@ -204,7 +204,34 @@ namespace Cabane
                 return false;
             }
         }
-     }
+        public List<String> SearchCabane(string searchedItem)
+        {
+            List<String> searchChar = new List<String>();
+
+            try
+            {
+                string search = "SELECT nom from cabane WHERE nom like \"%" + searchedItem + "%\"";
+                cmd.Connection = this.conn;
+                cmd.CommandText = search;
+                cmd.ExecuteNonQuery();
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    searchChar.Add(rdr.GetString(0));
+                }
+                return searchChar;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+        }
+    }
+
+   
 
     
 }

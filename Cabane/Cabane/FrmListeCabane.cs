@@ -13,7 +13,9 @@ namespace Cabane
 {
     public partial class FrmListeCabane : Form
     {
-        string server, uid, database, pwd;
+        string server, uid, database, pwd; 
+        manipdb db = new manipdb();
+
         public FrmListeCabane()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace Cabane
             lbxCabanes.Items.Clear();
             List<String> str = new List<String>();
             int i = 0;
-            manipdb db = new manipdb();
+           
 
             db.connexion(server, uid, database);
             str = db.List_nom_cabannes();
@@ -56,6 +58,25 @@ namespace Cabane
         private void tbxRecherche_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+            
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            lbxCabanes.Items.Clear();
+            List<String> search = new List<String>();
+            int i = 0;
+
+
+            db.connexion(server, uid, database);
+            search = db.SearchCabane(tbxRecherche.Text);
+            db.fermer();
+
+            while (search.Count() != i)
+            {
+                lbxCabanes.Items.Add(search[i]);
+                i++;
+            }
         }
     }
 }

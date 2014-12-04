@@ -30,7 +30,7 @@
         {
             this.lbxCabanes = new System.Windows.Forms.ListBox();
             this.tbxRecherche = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbxCabanes
@@ -42,7 +42,7 @@
             "ccc",
             "ddd",
             "eee"});
-            this.lbxCabanes.Location = new System.Drawing.Point(2, 24);
+            this.lbxCabanes.Location = new System.Drawing.Point(2, 42);
             this.lbxCabanes.Name = "lbxCabanes";
             this.lbxCabanes.Size = new System.Drawing.Size(283, 238);
             this.lbxCabanes.TabIndex = 0;
@@ -50,28 +50,29 @@
             // 
             // tbxRecherche
             // 
-            this.tbxRecherche.Location = new System.Drawing.Point(107, 2);
+            this.tbxRecherche.Location = new System.Drawing.Point(2, 12);
             this.tbxRecherche.Name = "tbxRecherche";
-            this.tbxRecherche.Size = new System.Drawing.Size(150, 20);
+            this.tbxRecherche.Size = new System.Drawing.Size(162, 20);
             this.tbxRecherche.TabIndex = 1;
             this.tbxRecherche.TextChanged += new System.EventHandler(this.tbxRecherche_TextChanged);
             this.tbxRecherche.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxRecherche_KeyPress);
             // 
-            // label1
+            // btnSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Recherche :";
+            this.btnSearch.Location = new System.Drawing.Point(197, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // FrmListeCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(284, 278);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbxRecherche);
             this.Controls.Add(this.lbxCabanes);
             this.Name = "FrmListeCabane";
@@ -86,6 +87,6 @@
 
         private System.Windows.Forms.ListBox lbxCabanes;
         private System.Windows.Forms.TextBox tbxRecherche;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
