@@ -72,5 +72,11 @@ namespace Cabane
 
         }
 
+        private void créationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCreerContact creerContact = new FrmCreerContact();
+            creerContact.Show(this);
+        }
+
     }
 }

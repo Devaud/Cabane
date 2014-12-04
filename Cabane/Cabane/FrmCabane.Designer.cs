@@ -42,6 +42,8 @@
             this.tbx_pwd = new System.Windows.Forms.TextBox();
             this.tbx_pseudo = new System.Windows.Forms.TextBox();
             this.lbl_pseudo = new System.Windows.Forms.Label();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.créationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +61,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
-            this.connexionToolStripMenuItem});
+            this.connexionToolStripMenuItem,
+            this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(530, 24);
@@ -172,6 +175,21 @@
             this.lbl_pseudo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_pseudo.Click += new System.EventHandler(this.label4_Click);
             // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.créationToolStripMenuItem});
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.contactToolStripMenuItem.Text = "Contact";
+            // 
+            // créationToolStripMenuItem
+            // 
+            this.créationToolStripMenuItem.Name = "créationToolStripMenuItem";
+            this.créationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.créationToolStripMenuItem.Text = "Création";
+            this.créationToolStripMenuItem.Click += new System.EventHandler(this.créationToolStripMenuItem_Click);
+            // 
             // FrmCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +227,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_pseudo;
+        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem créationToolStripMenuItem;
     }
 }
 
