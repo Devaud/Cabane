@@ -94,6 +94,7 @@
             this.TBXNom.Name = "TBXNom";
             this.TBXNom.Size = new System.Drawing.Size(117, 20);
             this.TBXNom.TabIndex = 5;
+            this.TBXNom.TextChanged += new System.EventHandler(this.TBXNom_TextChanged);
             // 
             // TBXPrenom
             // 
@@ -144,6 +145,7 @@
             this.BtnAjouter.TabIndex = 11;
             this.BtnAjouter.Text = "Ajouter";
             this.BtnAjouter.UseVisualStyleBackColor = true;
+            this.BtnAjouter.Click += new System.EventHandler(this.BtnAjouter_Click);
             // 
             // FrmCreerContact
             // 

@@ -54,5 +54,10 @@ namespace Cabane
         {
             this.Close();
         }
+
+        private void FrmInscription_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

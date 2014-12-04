@@ -209,6 +209,7 @@
             this.Controls.Add(this.lblPrenom);
             this.Name = "FrmInscription";
             this.Text = "Inscription";
+            this.Load += new System.EventHandler(this.FrmInscription_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
