@@ -134,10 +134,7 @@ namespace Cabane
         public List<String> List_nom_cabannes()
         {
             List<String> str = new List<String>();
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
             try
             {
                 // Create request for select name cabane
@@ -162,15 +159,7 @@ namespace Cabane
             }
         }
 
-<<<<<<< Updated upstream
-        /**
-         * Login
-         * @param string pseudo User pseudo
-         * @param string pwd User password
-         * @result int id
-         * */
-        public int Login(string pseudo, string pwd)
-=======
+        
         public bool check_contact_cabanes(string idCabanes, string idContact, int mode)
         {
             List<String> contact = new List<String>();
@@ -333,14 +322,19 @@ namespace Cabane
             }
         }
 
+        /**
+         * Login
+         * @param string pseudo User pseudo
+         * @param string pwd User password
+         * @result int id
+         * */
         public int Login(string pseudo, string mdp)
->>>>>>> Stashed changes
         {
             int result = -1;   
             try
             {
                 // Create request for select idPersonne personnes
-                SQL = "SELECT idPersonne FROM personnes WHERE pseudo='" + pseudo + "' AND mdp='" + pwd + "';";
+                SQL = "SELECT idPersonne FROM personnes WHERE pseudo='" + pseudo + "' AND mdp='" + mdp + "';";
                 cmd.Connection = this.conn;
                 cmd.CommandText = SQL; // Use the sql request
                 rdr = cmd.ExecuteReader();// Create the reader
@@ -386,14 +380,9 @@ namespace Cabane
                 // Create request for select contact info
                 SQL = "SELECT nom,prenom,telephone,email,siteWeb FROM contact";
                 cmd.Connection = conn;
-<<<<<<< Updated upstream
                 cmd.CommandText = SQL; // Use the sql request
                 cmd.ExecuteNonQuery(); // Execute sql request
                 rdr = cmd.ExecuteReader(); // Create the reader
-=======
-                cmd.CommandText = SQL;
-                cmd.ExecuteNonQuery();
->>>>>>> Stashed changes
 
                 // Use the reader while data exist
                 while (rdr.Read())
@@ -409,12 +398,7 @@ namespace Cabane
             }
             finally
             {
-<<<<<<< Updated upstream
                 conn.Close(); // Close the stream
-                
-=======
-                conn.Close();
->>>>>>> Stashed changes
             }
         }
 

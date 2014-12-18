@@ -62,6 +62,7 @@
             this.cabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creationContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TCgestionCabane.SuspendLayout();
@@ -334,11 +335,7 @@
             this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-<<<<<<< Updated upstream
             this.menuStrip1.Size = new System.Drawing.Size(481, 24);
-=======
-            this.menuStrip1.Size = new System.Drawing.Size(460, 24);
->>>>>>> Stashed changes
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -376,7 +373,6 @@
             // cabanesToolStripMenuItem
             // 
             this.cabanesToolStripMenuItem.Name = "cabanesToolStripMenuItem";
-<<<<<<< Updated upstream
             this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.cabanesToolStripMenuItem.Text = "Liste cabanes";
             this.cabanesToolStripMenuItem.Click += new System.EventHandler(this.cabanesToolStripMenuItem_Click);
@@ -405,34 +401,24 @@
             this.listeContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.listeContactToolStripMenuItem.Text = "Liste contact";
             this.listeContactToolStripMenuItem.Click += new System.EventHandler(this.listeContactToolStripMenuItem_Click);
-=======
             this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cabanesToolStripMenuItem.Text = "Cabanes";
->>>>>>> Stashed changes
             // 
             // creationContactToolStripMenuItem
             // 
-<<<<<<< Updated upstream
             this.creationContactToolStripMenuItem.Name = "creationContactToolStripMenuItem";
             this.creationContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.creationContactToolStripMenuItem.Text = "Creation contact";
             this.creationContactToolStripMenuItem.Click += new System.EventHandler(this.creationContactToolStripMenuItem_Click);
-=======
             this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
             this.contactsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.contactsToolStripMenuItem.Text = "Contacts";
-            this.contactsToolStripMenuItem.Click += new System.EventHandler(this.contactsToolStripMenuItem_Click);
->>>>>>> Stashed changes
             // 
             // FrmGestionCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(481, 299);
-=======
-            this.ClientSize = new System.Drawing.Size(460, 276);
->>>>>>> Stashed changes
             this.Controls.Add(this.TCgestionCabane);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmGestionCabane";
@@ -480,20 +466,17 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cabanesToolStripMenuItem;
-<<<<<<< Updated upstream
         private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeContactToolStripMenuItem;
         //private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
-=======
         private System.Windows.Forms.ToolStripMenuItem contactsToolStripMenuItem;
         private System.Windows.Forms.TabPage tab_affecter_cabanes;
         private System.Windows.Forms.Button btnCabaneContact;
         private System.Windows.Forms.Button btnContactCabane;
         private System.Windows.Forms.ListBox lsbCabanes;
         private System.Windows.Forms.ListBox lsbContact;
->>>>>>> Stashed changes
     }
 }

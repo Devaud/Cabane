@@ -85,7 +85,6 @@ namespace Cabane
             this.Hide();
         }
 
-<<<<<<< Updated upstream
         private void creationContactToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCreerContact creercontact = new FrmCreerContact();
@@ -96,7 +95,7 @@ namespace Cabane
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-=======
+        }
         private void btnContactCabane_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < lsbContact.SelectedIndices.Count; i++)
@@ -168,7 +167,6 @@ namespace Cabane
         private void lsbCabanes_SelectedIndexChanged(object sender, EventArgs e)
         {
             FrmGestionCabane.ActiveForm.Text = lsbCabanes.SelectedItems.Count.ToString();
->>>>>>> Stashed changes
         }
     }
 }
