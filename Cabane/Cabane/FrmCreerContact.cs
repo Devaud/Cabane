@@ -52,7 +52,6 @@ namespace Cabane
             if (db.addContact(nom, prenom, email, tel, website))
             {
                 MessageBox.Show("Contact ajouter avec succès");
-                this.Close();
             }
             else
             {
