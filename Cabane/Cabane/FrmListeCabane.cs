@@ -92,5 +92,18 @@ namespace Cabane
             contact.Show(this);
             this.Hide();
         }
+
+
+        private void creationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCreerContact creercontact = new FrmCreerContact();
+            creercontact.Show(this);
+            this.Hide();
+        }
+
+        private void quitterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

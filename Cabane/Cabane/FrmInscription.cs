@@ -90,5 +90,17 @@ namespace Cabane
                 }
             }
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void connexionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCabane cabane = new FrmCabane();
+            cabane.Show(this);
+            this.Hide();
+        }
     }
 }

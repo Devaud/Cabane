@@ -33,11 +33,31 @@ namespace Cabane
 
         }
 
-        private void cabanesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listeCabanesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmListeCabane cabane = new FrmListeCabane();
             cabane.Show(this);
             this.Hide();
         }
+
+        private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGestionCabane gestionCabane = new FrmGestionCabane();
+            gestionCabane.Show(this);
+            this.Hide();
+        }
+
+        private void creationContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCreerContact creercontact = new FrmCreerContact();
+            creercontact.Show(this);
+            this.Hide();
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

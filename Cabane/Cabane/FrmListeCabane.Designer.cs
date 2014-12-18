@@ -32,16 +32,18 @@
             this.tbxRecherche = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeCabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeContactToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.creationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // 
             // tbxRecherche
             // 
-            this.tbxRecherche.Location = new System.Drawing.Point(107, 31);
+            this.tbxRecherche.Location = new System.Drawing.Point(12, 27);
             this.tbxRecherche.Name = "tbxRecherche";
             this.tbxRecherche.Size = new System.Drawing.Size(162, 20);
             this.tbxRecherche.TabIndex = 1;
@@ -71,31 +73,63 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(197, 12);
+            this.btnSearch.Location = new System.Drawing.Point(197, 25);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // fichierToolStripMenuItem
+            // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deconnexionToolStripMenuItem,
+            this.quitterToolStripMenuItem1});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // deconnexionToolStripMenuItem
+            // 
+            this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.deconnexionToolStripMenuItem.Text = "Deconnexion";
+            // 
+            // quitterToolStripMenuItem1
+            // 
+            this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.quitterToolStripMenuItem1.Text = "Quitter";
+            this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
+            // 
+            // déconnexionToolStripMenuItem
+            // 
+            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
             this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            // listeToolStripMenuItem
-            this.listeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            // 
+            // cabaneToolStripMenuItem
+            // 
+            this.cabaneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listeCabanesToolStripMenuItem,
             this.gestionCabaneToolStripMenuItem});
-            this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.listeToolStripMenuItem.Text = "Cabane";
+            this.cabaneToolStripMenuItem.Name = "cabaneToolStripMenuItem";
+            this.cabaneToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.cabaneToolStripMenuItem.Text = "Cabane";
             // 
             // listeCabanesToolStripMenuItem
             // 
             this.listeCabanesToolStripMenuItem.Checked = true;
             this.listeCabanesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.listeCabanesToolStripMenuItem.Enabled = false;
             this.listeCabanesToolStripMenuItem.Name = "listeCabanesToolStripMenuItem";
             this.listeCabanesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.listeCabanesToolStripMenuItem.Text = "Liste";
-            this.listeCabanesToolStripMenuItem.Click += new System.EventHandler(this.listeCabanesToolStripMenuItem_Click);
+            this.listeCabanesToolStripMenuItem.Text = "Liste cabane";
             // 
             // gestionCabaneToolStripMenuItem
             // 
@@ -107,23 +141,31 @@
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeToolStripMenuItem1,
+            this.listeContactToolStripMenuItem1,
             this.creationToolStripMenuItem});
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
             this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.contactToolStripMenuItem.Text = "Contact";
             // 
+            // listeContactToolStripMenuItem1
+            // 
+            this.listeContactToolStripMenuItem1.Name = "listeContactToolStripMenuItem1";
+            this.listeContactToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.listeContactToolStripMenuItem1.Text = "Liste contact";
+            this.listeContactToolStripMenuItem1.Click += new System.EventHandler(this.listeToolStripMenuItem1_Click);
+            // 
+            // creationToolStripMenuItem
             // 
             this.creationToolStripMenuItem.Name = "creationToolStripMenuItem";
-            this.creationToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.creationToolStripMenuItem.Text = "Creation";
+            this.creationToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.creationToolStripMenuItem.Text = "Creation contact";
             this.creationToolStripMenuItem.Click += new System.EventHandler(this.creationToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
-            this.listeToolStripMenuItem,
+            this.cabaneToolStripMenuItem,
             this.contactToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
@@ -137,13 +179,6 @@
             this.fichierToolStripMenuItem1.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem1.Text = "Fichier";
             // 
-            // listeToolStripMenuItem1
-            // 
-            this.listeToolStripMenuItem1.Name = "listeToolStripMenuItem1";
-            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.listeToolStripMenuItem1.Text = "Liste";
-            this.listeToolStripMenuItem1.Click += new System.EventHandler(this.listeToolStripMenuItem1_Click);
-            // 
             // FrmListeCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +190,7 @@
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "FrmListeCabane";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste des cabanes";
             this.Load += new System.EventHandler(this.FrmListeCabane_Load);
             this.menuStrip2.ResumeLayout(false);
@@ -176,10 +212,12 @@
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeCabanesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creationToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem listeContactToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem1;
     }
 }

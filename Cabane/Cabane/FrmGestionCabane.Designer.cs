@@ -53,9 +53,12 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cabanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionCabaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creationContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TCgestionCabane.SuspendLayout();
             this.TPajoutCabane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDlits)).BeginInit();
@@ -268,16 +271,18 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
-            this.listeToolStripMenuItem});
+            this.cabaneToolStripMenuItem,
+            this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(505, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(481, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deconnexionToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -286,7 +291,7 @@
             // deconnexionToolStripMenuItem
             // 
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             // 
             // quitterToolStripMenuItem
@@ -294,36 +299,65 @@
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
-            // listeToolStripMenuItem
+            // cabaneToolStripMenuItem
             // 
-            this.listeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cabaneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cabanesToolStripMenuItem,
-            this.contactsToolStripMenuItem});
-            this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.listeToolStripMenuItem.Text = "Liste";
+            this.gestionCabaneToolStripMenuItem});
+            this.cabaneToolStripMenuItem.Name = "cabaneToolStripMenuItem";
+            this.cabaneToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.cabaneToolStripMenuItem.Text = "Cabane";
             // 
             // cabanesToolStripMenuItem
             // 
             this.cabanesToolStripMenuItem.Name = "cabanesToolStripMenuItem";
-            this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cabanesToolStripMenuItem.Text = "Cabanes";
+            this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cabanesToolStripMenuItem.Text = "Liste cabanes";
             this.cabanesToolStripMenuItem.Click += new System.EventHandler(this.cabanesToolStripMenuItem_Click);
             // 
-            // contactsToolStripMenuItem
-            this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
-            this.contactsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.contactsToolStripMenuItem.Text = "Contacts";
-            this.contactsToolStripMenuItem.Click += new System.EventHandler(this.contactsToolStripMenuItem_Click);
+            // gestionCabaneToolStripMenuItem
+            // 
+            this.gestionCabaneToolStripMenuItem.Checked = true;
+            this.gestionCabaneToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.gestionCabaneToolStripMenuItem.Enabled = false;
+            this.gestionCabaneToolStripMenuItem.Name = "gestionCabaneToolStripMenuItem";
+            this.gestionCabaneToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.gestionCabaneToolStripMenuItem.Text = "Gestion cabane";
+            // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeContactToolStripMenuItem,
+            this.creationContactToolStripMenuItem});
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.contactToolStripMenuItem.Text = "Contact";
+            // 
+            // listeContactToolStripMenuItem
+            // 
+            this.listeContactToolStripMenuItem.Name = "listeContactToolStripMenuItem";
+            this.listeContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.listeContactToolStripMenuItem.Text = "Liste contact";
+            this.listeContactToolStripMenuItem.Click += new System.EventHandler(this.listeContactToolStripMenuItem_Click);
+            // 
+            // creationContactToolStripMenuItem
+            // 
+            this.creationContactToolStripMenuItem.Name = "creationContactToolStripMenuItem";
+            this.creationContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.creationContactToolStripMenuItem.Text = "Creation contact";
+            this.creationContactToolStripMenuItem.Click += new System.EventHandler(this.creationContactToolStripMenuItem_Click);
+            // 
             // FrmGestionCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 303);
+            this.ClientSize = new System.Drawing.Size(481, 299);
             this.Controls.Add(this.TCgestionCabane);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmGestionCabane";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGestionCabane";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmGestionCabane_FormClosed);
             this.TCgestionCabane.ResumeLayout(false);
@@ -363,8 +397,13 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.Button BtnAnnuler;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cabanesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contactsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeContactToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
     }
 }

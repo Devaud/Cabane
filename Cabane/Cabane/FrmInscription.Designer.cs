@@ -44,11 +44,16 @@
             this.TBXTel = new System.Windows.Forms.TextBox();
             this.BtnValider = new System.Windows.Forms.Button();
             this.BtnAnnuler = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblPrenom
             // 
-            this.lblPrenom.Location = new System.Drawing.Point(12, 13);
+            this.lblPrenom.Location = new System.Drawing.Point(16, 44);
             this.lblPrenom.Name = "lblPrenom";
             this.lblPrenom.Size = new System.Drawing.Size(111, 13);
             this.lblPrenom.TabIndex = 0;
@@ -57,7 +62,7 @@
             // 
             // lblNom
             // 
-            this.lblNom.Location = new System.Drawing.Point(12, 38);
+            this.lblNom.Location = new System.Drawing.Point(16, 69);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(111, 13);
             this.lblNom.TabIndex = 1;
@@ -66,7 +71,7 @@
             // 
             // lblPseudo
             // 
-            this.lblPseudo.Location = new System.Drawing.Point(12, 62);
+            this.lblPseudo.Location = new System.Drawing.Point(16, 93);
             this.lblPseudo.Name = "lblPseudo";
             this.lblPseudo.Size = new System.Drawing.Size(111, 13);
             this.lblPseudo.TabIndex = 2;
@@ -75,7 +80,7 @@
             // 
             // lblMDP
             // 
-            this.lblMDP.Location = new System.Drawing.Point(12, 88);
+            this.lblMDP.Location = new System.Drawing.Point(16, 119);
             this.lblMDP.Name = "lblMDP";
             this.lblMDP.Size = new System.Drawing.Size(111, 13);
             this.lblMDP.TabIndex = 3;
@@ -84,7 +89,7 @@
             // 
             // lblValidMDP
             // 
-            this.lblValidMDP.Location = new System.Drawing.Point(12, 113);
+            this.lblValidMDP.Location = new System.Drawing.Point(16, 144);
             this.lblValidMDP.Name = "lblValidMDP";
             this.lblValidMDP.Size = new System.Drawing.Size(111, 13);
             this.lblValidMDP.TabIndex = 4;
@@ -93,7 +98,7 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Location = new System.Drawing.Point(12, 139);
+            this.lblEmail.Location = new System.Drawing.Point(16, 170);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(111, 13);
             this.lblEmail.TabIndex = 5;
@@ -103,7 +108,7 @@
             // 
             // lblTel
             // 
-            this.lblTel.Location = new System.Drawing.Point(12, 164);
+            this.lblTel.Location = new System.Drawing.Point(16, 195);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(111, 13);
             this.lblTel.TabIndex = 6;
@@ -112,7 +117,7 @@
             // 
             // TBXPrenom
             // 
-            this.TBXPrenom.Location = new System.Drawing.Point(129, 13);
+            this.TBXPrenom.Location = new System.Drawing.Point(133, 44);
             this.TBXPrenom.MaxLength = 30;
             this.TBXPrenom.Name = "TBXPrenom";
             this.TBXPrenom.Size = new System.Drawing.Size(131, 20);
@@ -121,7 +126,7 @@
             // 
             // TBXNom
             // 
-            this.TBXNom.Location = new System.Drawing.Point(130, 38);
+            this.TBXNom.Location = new System.Drawing.Point(134, 69);
             this.TBXNom.MaxLength = 30;
             this.TBXNom.Name = "TBXNom";
             this.TBXNom.Size = new System.Drawing.Size(131, 20);
@@ -130,7 +135,7 @@
             // 
             // TBXPseudo
             // 
-            this.TBXPseudo.Location = new System.Drawing.Point(130, 62);
+            this.TBXPseudo.Location = new System.Drawing.Point(134, 93);
             this.TBXPseudo.MaxLength = 30;
             this.TBXPseudo.Name = "TBXPseudo";
             this.TBXPseudo.Size = new System.Drawing.Size(131, 20);
@@ -139,7 +144,7 @@
             // 
             // TBXMDP
             // 
-            this.TBXMDP.Location = new System.Drawing.Point(130, 88);
+            this.TBXMDP.Location = new System.Drawing.Point(134, 119);
             this.TBXMDP.MaxLength = 30;
             this.TBXMDP.Name = "TBXMDP";
             this.TBXMDP.Size = new System.Drawing.Size(131, 20);
@@ -148,7 +153,7 @@
             // 
             // TBXValideMDP
             // 
-            this.TBXValideMDP.Location = new System.Drawing.Point(130, 113);
+            this.TBXValideMDP.Location = new System.Drawing.Point(134, 144);
             this.TBXValideMDP.MaxLength = 30;
             this.TBXValideMDP.Name = "TBXValideMDP";
             this.TBXValideMDP.Size = new System.Drawing.Size(131, 20);
@@ -157,7 +162,7 @@
             // 
             // TBXEmail
             // 
-            this.TBXEmail.Location = new System.Drawing.Point(130, 139);
+            this.TBXEmail.Location = new System.Drawing.Point(134, 170);
             this.TBXEmail.MaxLength = 50;
             this.TBXEmail.Name = "TBXEmail";
             this.TBXEmail.Size = new System.Drawing.Size(131, 20);
@@ -166,7 +171,7 @@
             // 
             // TBXTel
             // 
-            this.TBXTel.Location = new System.Drawing.Point(130, 164);
+            this.TBXTel.Location = new System.Drawing.Point(134, 195);
             this.TBXTel.MaxLength = 30;
             this.TBXTel.Name = "TBXTel";
             this.TBXTel.Size = new System.Drawing.Size(131, 20);
@@ -176,7 +181,7 @@
             // BtnValider
             // 
             this.BtnValider.Enabled = false;
-            this.BtnValider.Location = new System.Drawing.Point(151, 190);
+            this.BtnValider.Location = new System.Drawing.Point(155, 221);
             this.BtnValider.Name = "BtnValider";
             this.BtnValider.Size = new System.Drawing.Size(109, 23);
             this.BtnValider.TabIndex = 14;
@@ -186,7 +191,7 @@
             // 
             // BtnAnnuler
             // 
-            this.BtnAnnuler.Location = new System.Drawing.Point(12, 191);
+            this.BtnAnnuler.Location = new System.Drawing.Point(16, 222);
             this.BtnAnnuler.Name = "BtnAnnuler";
             this.BtnAnnuler.Size = new System.Drawing.Size(109, 23);
             this.BtnAnnuler.TabIndex = 15;
@@ -194,11 +199,44 @@
             this.BtnAnnuler.UseVisualStyleBackColor = true;
             this.BtnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichierToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(276, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fichierToolStripMenuItem
+            // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connexionToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // connexionToolStripMenuItem
+            // 
+            this.connexionToolStripMenuItem.Name = "connexionToolStripMenuItem";
+            this.connexionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.connexionToolStripMenuItem.Text = "Connexion";
+            this.connexionToolStripMenuItem.Click += new System.EventHandler(this.connexionToolStripMenuItem_Click);
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
             // FrmInscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 226);
+            this.ClientSize = new System.Drawing.Size(276, 265);
             this.Controls.Add(this.BtnAnnuler);
             this.Controls.Add(this.BtnValider);
             this.Controls.Add(this.TBXTel);
@@ -215,12 +253,16 @@
             this.Controls.Add(this.lblPseudo);
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.lblPrenom);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "FrmInscription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscription";
             this.Load += new System.EventHandler(this.FrmInscription_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +286,9 @@
         private System.Windows.Forms.TextBox TBXTel;
         private System.Windows.Forms.Button BtnValider;
         private System.Windows.Forms.Button BtnAnnuler;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
     }
 }

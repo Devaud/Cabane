@@ -36,13 +36,7 @@ namespace Cabane
         {
             FrmInscription ins = new FrmInscription();
             ins.Show(this);
-        }
-
-        private void listeDesCabanesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmListeCabane ins = new FrmListeCabane();
-            ins.Show(this);
-           
+            this.Hide();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -58,12 +52,18 @@ namespace Cabane
             }
             else
             {
-                tbx_pseudo.Visible = false;
+                if(db.connected==true)
+                {
+                    FrmListeCabane liste = new FrmListeCabane();
+                    liste.Show(this);
+                    this.Hide();
+                }
+                /*tbx_pseudo.Visible = false;
                 label3.Visible = false;
                 tbx_pwd.Visible = false;
                 btn_login.Visible = false;
 
-                lbl_pseudo.Text = "Pseudo USER"; //Nom du user recupere des la base
+                lbl_pseudo.Text = "Pseudo USER"; //Nom du user recupere des la base*/
             }
         }
 
@@ -72,10 +72,10 @@ namespace Cabane
 
         }
 
-        private void créationToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCreerContact creerContact = new FrmCreerContact();
-            creerContact.Show(this);
+            Application.Exit();
         }
 
     }

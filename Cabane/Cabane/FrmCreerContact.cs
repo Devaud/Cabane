@@ -87,5 +87,31 @@ namespace Cabane
         {
             this.Close();
         }
+
+        private void listeCabaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListeCabane cabane = new FrmListeCabane();
+            cabane.Show(this);
+            this.Hide();
+        }
+
+        private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGestionCabane gestionCabane = new FrmGestionCabane();
+            gestionCabane.Show(this);
+            this.Hide();
+        }
+
+        private void listeContactsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmContacts contact = new FrmContacts();
+            contact.Show(this);
+            this.Hide();
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
