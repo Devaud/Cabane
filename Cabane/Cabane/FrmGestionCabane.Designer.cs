@@ -49,6 +49,11 @@
             this.TBnom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TPmodifierCabane = new System.Windows.Forms.TabPage();
+            this.tab_affecter_cabanes = new System.Windows.Forms.TabPage();
+            this.btnCabaneContact = new System.Windows.Forms.Button();
+            this.btnContactCabane = new System.Windows.Forms.Button();
+            this.lsbCabanes = new System.Windows.Forms.ListBox();
+            this.lsbContact = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +67,7 @@
             this.TCgestionCabane.SuspendLayout();
             this.TPajoutCabane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDlits)).BeginInit();
+            this.tab_affecter_cabanes.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +75,7 @@
             // 
             this.TCgestionCabane.Controls.Add(this.TPajoutCabane);
             this.TCgestionCabane.Controls.Add(this.TPmodifierCabane);
+            this.TCgestionCabane.Controls.Add(this.tab_affecter_cabanes);
             this.TCgestionCabane.Location = new System.Drawing.Point(12, 39);
             this.TCgestionCabane.Name = "TCgestionCabane";
             this.TCgestionCabane.SelectedIndex = 0;
@@ -267,6 +274,58 @@
             this.TPmodifierCabane.Text = "Modifier une cabane";
             this.TPmodifierCabane.UseVisualStyleBackColor = true;
             // 
+            // tab_affecter_cabanes
+            // 
+            this.tab_affecter_cabanes.Controls.Add(this.btnCabaneContact);
+            this.tab_affecter_cabanes.Controls.Add(this.btnContactCabane);
+            this.tab_affecter_cabanes.Controls.Add(this.lsbCabanes);
+            this.tab_affecter_cabanes.Controls.Add(this.lsbContact);
+            this.tab_affecter_cabanes.Location = new System.Drawing.Point(4, 22);
+            this.tab_affecter_cabanes.Name = "tab_affecter_cabanes";
+            this.tab_affecter_cabanes.Size = new System.Drawing.Size(426, 198);
+            this.tab_affecter_cabanes.TabIndex = 2;
+            this.tab_affecter_cabanes.Text = "Affecter cabannes -> contact";
+            this.tab_affecter_cabanes.UseVisualStyleBackColor = true;
+            // 
+            // btnCabaneContact
+            // 
+            this.btnCabaneContact.Location = new System.Drawing.Point(179, 112);
+            this.btnCabaneContact.Name = "btnCabaneContact";
+            this.btnCabaneContact.Size = new System.Drawing.Size(75, 23);
+            this.btnCabaneContact.TabIndex = 3;
+            this.btnCabaneContact.Text = "<-- Affecter";
+            this.btnCabaneContact.UseVisualStyleBackColor = true;
+            this.btnCabaneContact.Click += new System.EventHandler(this.btnCabaneContact_Click);
+            // 
+            // btnContactCabane
+            // 
+            this.btnContactCabane.Location = new System.Drawing.Point(179, 46);
+            this.btnContactCabane.Name = "btnContactCabane";
+            this.btnContactCabane.Size = new System.Drawing.Size(75, 23);
+            this.btnContactCabane.TabIndex = 2;
+            this.btnContactCabane.Text = "Affecter -->";
+            this.btnContactCabane.UseVisualStyleBackColor = true;
+            this.btnContactCabane.Click += new System.EventHandler(this.btnContactCabane_Click);
+            // 
+            // lsbCabanes
+            // 
+            this.lsbCabanes.FormattingEnabled = true;
+            this.lsbCabanes.Location = new System.Drawing.Point(303, 3);
+            this.lsbCabanes.Name = "lsbCabanes";
+            this.lsbCabanes.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lsbCabanes.Size = new System.Drawing.Size(120, 186);
+            this.lsbCabanes.TabIndex = 1;
+            this.lsbCabanes.SelectedIndexChanged += new System.EventHandler(this.lsbCabanes_SelectedIndexChanged);
+            // 
+            // lsbContact
+            // 
+            this.lsbContact.FormattingEnabled = true;
+            this.lsbContact.Location = new System.Drawing.Point(3, 3);
+            this.lsbContact.Name = "lsbContact";
+            this.lsbContact.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lsbContact.Size = new System.Drawing.Size(120, 186);
+            this.lsbContact.TabIndex = 0;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -275,7 +334,11 @@
             this.contactToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< Updated upstream
             this.menuStrip1.Size = new System.Drawing.Size(481, 24);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(460, 24);
+>>>>>>> Stashed changes
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -297,7 +360,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -313,6 +376,7 @@
             // cabanesToolStripMenuItem
             // 
             this.cabanesToolStripMenuItem.Name = "cabanesToolStripMenuItem";
+<<<<<<< Updated upstream
             this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.cabanesToolStripMenuItem.Text = "Liste cabanes";
             this.cabanesToolStripMenuItem.Click += new System.EventHandler(this.cabanesToolStripMenuItem_Click);
@@ -341,29 +405,46 @@
             this.listeContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.listeContactToolStripMenuItem.Text = "Liste contact";
             this.listeContactToolStripMenuItem.Click += new System.EventHandler(this.listeContactToolStripMenuItem_Click);
+=======
+            this.cabanesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.cabanesToolStripMenuItem.Text = "Cabanes";
+>>>>>>> Stashed changes
             // 
             // creationContactToolStripMenuItem
             // 
+<<<<<<< Updated upstream
             this.creationContactToolStripMenuItem.Name = "creationContactToolStripMenuItem";
             this.creationContactToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.creationContactToolStripMenuItem.Text = "Creation contact";
             this.creationContactToolStripMenuItem.Click += new System.EventHandler(this.creationContactToolStripMenuItem_Click);
+=======
+            this.contactsToolStripMenuItem.Name = "contactsToolStripMenuItem";
+            this.contactsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.contactsToolStripMenuItem.Text = "Contacts";
+            this.contactsToolStripMenuItem.Click += new System.EventHandler(this.contactsToolStripMenuItem_Click);
+>>>>>>> Stashed changes
             // 
             // FrmGestionCabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(481, 299);
+=======
+            this.ClientSize = new System.Drawing.Size(460, 276);
+>>>>>>> Stashed changes
             this.Controls.Add(this.TCgestionCabane);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmGestionCabane";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGestionCabane";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmGestionCabane_FormClosed);
+            this.Load += new System.EventHandler(this.FrmGestionCabane_Load);
             this.TCgestionCabane.ResumeLayout(false);
             this.TPajoutCabane.ResumeLayout(false);
             this.TPajoutCabane.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDlits)).EndInit();
+            this.tab_affecter_cabanes.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -399,11 +480,20 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cabanesToolStripMenuItem;
+<<<<<<< Updated upstream
         private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeContactToolStripMenuItem;
         //private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionCabaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creationContactToolStripMenuItem;
+=======
+        private System.Windows.Forms.ToolStripMenuItem contactsToolStripMenuItem;
+        private System.Windows.Forms.TabPage tab_affecter_cabanes;
+        private System.Windows.Forms.Button btnCabaneContact;
+        private System.Windows.Forms.Button btnContactCabane;
+        private System.Windows.Forms.ListBox lsbCabanes;
+        private System.Windows.Forms.ListBox lsbContact;
+>>>>>>> Stashed changes
     }
 }

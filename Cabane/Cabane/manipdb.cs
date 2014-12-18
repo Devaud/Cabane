@@ -134,6 +134,10 @@ namespace Cabane
         public List<String> List_nom_cabannes()
         {
             List<String> str = new List<String>();
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             try
             {
                 // Create request for select name cabane
@@ -158,6 +162,7 @@ namespace Cabane
             }
         }
 
+<<<<<<< Updated upstream
         /**
          * Login
          * @param string pseudo User pseudo
@@ -165,6 +170,171 @@ namespace Cabane
          * @result int id
          * */
         public int Login(string pseudo, string pwd)
+=======
+        public bool check_contact_cabanes(string idCabanes, string idContact, int mode)
+        {
+            List<String> contact = new List<String>();
+            List<String> cabanes = new List<String>();
+            bool result = false;
+
+            try
+            {
+
+                SQL = "select idCabane, idContact from contactcabane";
+
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+                rdr = cmd.ExecuteReader();
+
+                while(rdr.Read())
+                {
+                    cabanes.Add(rdr.GetString(0));
+                    contact.Add(rdr.GetString(1));
+                }
+
+                if (cabanes.Count == 0)
+                {
+                    result = true;
+                }
+                else if (contact.Count == 0)
+                {
+                    result = true;
+                }
+
+                for (int i = 0; i < cabanes.Count;i++ )
+                {
+                    if (mode == 0)
+                    {
+                        if (cabanes[i] == idCabanes)
+                        {
+                            if (contact[i] == idContact)
+                            {
+                                result = false;
+                            }
+                            else
+                            {
+                                result = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (contact[i] == idCabanes)
+                        {
+                            if (cabanes[i] == idContact)
+                            {
+                                result = false;
+                            }
+                            else
+                            {
+                                result = true;
+                            }
+                        }
+                    }
+                }
+
+                return result;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                this.fermer();
+            }
+        }
+
+        public List<List<String>> list_cabanes()
+        {
+            List<List<String>> str = new List<List<String>>();
+            int i = 0;
+
+            try
+            {
+                SQL = "select idCabane, nom from cabane";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    str.Add(new List<String>());
+                    str[i].Add(rdr.GetString(0));
+                    str[i].Add(rdr.GetString(1));
+                    i++;
+                }
+
+                return str;
+            }
+
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public List<List<String>> list_contacts()
+        {
+            List<List<String>> str = new List<List<String>>();
+            int i = 0;
+
+            try
+            {
+                SQL = "select idContact, nom from contact";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+                rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    str.Add(new List<String>());
+                    str[i].Add(rdr.GetString(0));
+                    str[i].Add(rdr.GetString(1));
+                    i++;
+                }
+
+                return str;
+            }
+
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public bool insert_contact_cabanes(string idContact, string idCabanes)
+        {
+            try
+            {
+                SQL = "insert into contactcabane(idCabane, idContact) values(\""+ idCabanes+"\",\""+ idContact +"\")";
+                cmd.Connection = this.conn;
+                cmd.CommandText = SQL;
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                this.fermer();
+            }
+        }
+
+        public int Login(string pseudo, string mdp)
+>>>>>>> Stashed changes
         {
             int result = -1;   
             try
@@ -216,9 +386,14 @@ namespace Cabane
                 // Create request for select contact info
                 SQL = "SELECT nom,prenom,telephone,email,siteWeb FROM contact";
                 cmd.Connection = conn;
+<<<<<<< Updated upstream
                 cmd.CommandText = SQL; // Use the sql request
                 cmd.ExecuteNonQuery(); // Execute sql request
                 rdr = cmd.ExecuteReader(); // Create the reader
+=======
+                cmd.CommandText = SQL;
+                cmd.ExecuteNonQuery();
+>>>>>>> Stashed changes
 
                 // Use the reader while data exist
                 while (rdr.Read())
@@ -234,8 +409,12 @@ namespace Cabane
             }
             finally
             {
+<<<<<<< Updated upstream
                 conn.Close(); // Close the stream
                 
+=======
+                conn.Close();
+>>>>>>> Stashed changes
             }
         }
 

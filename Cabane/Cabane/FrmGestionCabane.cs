@@ -27,17 +27,13 @@ namespace Cabane
         {
 
         }
-
+        manipdb db = new manipdb();
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
             if (TBnom.Text != "" && TBadresse.Text != "" && TBaltitude.Text != "" && TBlocalite.Text != "" && TBnpa.Text != "" && TBprix.Text != "")
             {
-                manipdb db = new manipdb();
-                //MySqlConnection var = new MySqlConnection();
-                
-                db.connexion("127.0.0.1", "root", "cabanes");
 
-                
+                db.connexion("127.0.0.1", "root", "cabanes");
 
                 var nom = TBnom.Text;
                 var adresse = TBadresse.Text;
@@ -48,9 +44,9 @@ namespace Cabane
                 var photo = "";
                 var nbLits = NUDlits.Value;
 
-                var douche = false; 
-                
-                if(CBdouche.SelectedText == "Oui")
+                var douche = false;
+
+                if (CBdouche.SelectedText == "Oui")
                 {
                     douche = true;
                 }
@@ -89,6 +85,7 @@ namespace Cabane
             this.Hide();
         }
 
+<<<<<<< Updated upstream
         private void creationContactToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCreerContact creercontact = new FrmCreerContact();
@@ -99,6 +96,79 @@ namespace Cabane
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+=======
+        private void btnContactCabane_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lsbContact.SelectedIndices.Count; i++)
+            {
+                for (int y = 0; y < lsbCabanes.SelectedIndices.Count; y++)
+                {
+                    db.connexion("127.0.0.1", "root", "cabanes", "");
+
+                    int u = lsbContact.SelectedIndices[i];
+                    string idContact = contacts[u][0];
+                    int z = lsbCabanes.SelectedIndices[y];
+                    string idCabane = cabanes[z][0];
+
+                    if (db.check_contact_cabanes(idContact, idCabane, 1))
+                    {
+                        db.connexion("127.0.0.1", "root", "cabanes", "");
+                        db.insert_contact_cabanes(idContact, idCabane);
+                    }
+                }
+            }
+        }
+
+        List<List<String>> cabanes = new List<List<String>>();
+        List<List<String>> contacts = new List<List<String>>();
+        private void FrmGestionCabane_Load(object sender, EventArgs e)
+        {
+
+
+            db.connexion("127.0.0.1", "root", "cabanes", "");
+            contacts = db.list_contacts();
+            for (int i = 0; i < contacts.Count(); i++)
+            {
+                lsbContact.Items.Add(contacts[i][1]);
+            }
+            db.fermer();
+
+            db.connexion("127.0.0.1", "root", "cabanes", "");
+            cabanes = db.list_cabanes();
+            for (int i = 0; i < cabanes.Count(); i++)
+            {
+                lsbCabanes.Items.Add(cabanes[i][1]);
+            }
+
+            db.fermer();
+        }
+
+        private void btnCabaneContact_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lsbCabanes.SelectedIndices.Count; i++)
+            {
+                for (int y = 0; y < lsbContact.SelectedIndices.Count; y++)
+                {
+                    db.connexion("127.0.0.1", "root", "cabanes", "");
+
+                    int u = lsbCabanes.SelectedIndices[i];
+                    string idCabane = cabanes[u][0];
+                    int z = lsbContact.SelectedIndices[y];
+                    string idContact = contacts[z][0];
+
+                    if (db.check_contact_cabanes(idContact, idCabane, 0))
+                    {
+                        db.connexion("127.0.0.1", "root", "cabanes", "");
+                        db.insert_contact_cabanes(idContact, idCabane);
+                    }
+                }
+            }
+        }
+
+        private void lsbCabanes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FrmGestionCabane.ActiveForm.Text = lsbCabanes.SelectedItems.Count.ToString();
+>>>>>>> Stashed changes
         }
     }
 }
