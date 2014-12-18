@@ -17,11 +17,17 @@ namespace Cabane
         {
             InitializeComponent();
         }
-
+        // global variable
+        string server, uid, database, pwd;
         manipdb db = new manipdb();
+
         private void FrmCabane_Load(object sender, EventArgs e)
-        {
-            
+        {   
+            //Initialisation des variables
+            server = "127.0.0.1";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
+            database = "cabanes";
         }
 
         private void gestionCabaneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,7 +49,7 @@ namespace Cabane
         {
             int id_user = 0;
 
-            db.connexion("127.0.0.1", "root", "cabanes", "");
+            db.connexion(server, uid, database, pwd);
             id_user = db.Login(tbx_pseudo.Text, tbx_pwd.Text);
 
             if(id_user == -1)

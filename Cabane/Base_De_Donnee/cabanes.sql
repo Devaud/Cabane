@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: 127.0.0.1
--- Généré le: Jeu 27 Novembre 2014 à 13:12
+-- Généré le: Jeu 18 Décembre 2014 à 16:06
 -- Version du serveur: 5.6.11-log
 -- Version de PHP: 5.4.14
 
@@ -38,14 +38,15 @@ CREATE TABLE IF NOT EXISTS `cabane` (
   `altitude` varchar(25) NOT NULL,
   `douches` tinyint(1) NOT NULL,
   PRIMARY KEY (`idCabane`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `cabane`
 --
 
 INSERT INTO `cabane` (`idCabane`, `nom`, `adresse`, `photo`, `localite`, `NPA`, `nbLits`, `prixNuit`, `altitude`, `douches`) VALUES
-(1, 'test', 'test', '', 'test', '1234', 1, '235', 'test', 0);
+(1, 'test', 'test', '', 'test', '1234', 1, '235', 'test', 0),
+(3, 'PraFleuri', 'Nendaz', '', 'Nendaz', '1956', 25, '12', '2012', 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +79,14 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `email` varchar(50) NOT NULL,
   `siteWeb` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idContact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `contact`
+--
+
+INSERT INTO `contact` (`idContact`, `nom`, `prenom`, `telephone`, `email`, `siteWeb`) VALUES
+(1, 'Travnjak', 'Jasmina', '55568524', 'jt@edu.ge.ch', 'www.jt.com');
 
 -- --------------------------------------------------------
 
@@ -108,7 +116,14 @@ CREATE TABLE IF NOT EXISTS `personnes` (
   `email` varchar(50) NOT NULL,
   `telephone` varchar(15) NOT NULL,
   PRIMARY KEY (`idPersonne`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `personnes`
+--
+
+INSERT INTO `personnes` (`idPersonne`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `telephone`) VALUES
+(2, 'test', 'test', 'test', 'test', 'test@gmail.com', '232451');
 
 --
 -- Contraintes pour les tables exportées

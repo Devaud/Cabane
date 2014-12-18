@@ -22,7 +22,8 @@ namespace Cabane
 
             // Initialize server info
             server = "127.0.0.1";
-            uid = "root";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
             database = "cabanes";
             
             // Add Item in the list
@@ -59,7 +60,7 @@ namespace Cabane
             // Password verifiaction.
             if (pwd == pwd2)
             {
-                db.connexion(server, uid, database); // Create connection
+                db.connexion(server, uid, database, pwd); // Create connection
                 db.setUser(firstname, lastname, pseudo, pwd, email, tel); // Execute request
                 db.fermer(); // Close db
 

@@ -12,9 +12,15 @@ namespace Cabane
 {
     public partial class FrmContacts : Form
     {
+        string server, uid, pwd, database;
         public FrmContacts()
         {
             InitializeComponent();
+
+            server = "127.0.0.1";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
+            database = "cabanes";
         }
 
         private void FrmContacts_Load(object sender, EventArgs e)

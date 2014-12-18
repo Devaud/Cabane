@@ -316,7 +316,6 @@
             this.lsbCabanes.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lsbCabanes.Size = new System.Drawing.Size(120, 186);
             this.lsbCabanes.TabIndex = 1;
-            this.lsbCabanes.SelectedIndexChanged += new System.EventHandler(this.lsbCabanes_SelectedIndexChanged);
             // 
             // lsbContact
             // 

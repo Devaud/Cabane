@@ -13,7 +13,7 @@ namespace Cabane
     public partial class FrmCreerContact : Form
     {
         // global variable
-        string server, uid, database;
+        string server, uid, database, pwd;
         List<TextBox> TBXList = new List<TextBox>();
 
         /**
@@ -25,7 +25,8 @@ namespace Cabane
 
             // Initialize variable
             server = "127.0.0.1";
-            uid = "root";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
             database = "cabanes";
 
             // Add item in the list
@@ -56,7 +57,7 @@ namespace Cabane
             
 
             // Data base
-            db.connexion(server, uid, database); // Connection with database
+            db.connexion(server, uid, database, pwd); // Connection with database
             if (db.addContact(lastname, firstname, email, tel, website)) // Add Contact
             {
                 MessageBox.Show("Contact ajouter avec succès"); // Success Message

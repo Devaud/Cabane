@@ -13,9 +13,15 @@ namespace Cabane
 {
     public partial class FrmGestionCabane : Form
     {
+        string server, uid, pwd, database;
         public FrmGestionCabane()
         {
             InitializeComponent();
+
+            server = "127.0.0.1";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
+            database = "cabanes";
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -33,7 +39,7 @@ namespace Cabane
             if (TBnom.Text != "" && TBadresse.Text != "" && TBaltitude.Text != "" && TBlocalite.Text != "" && TBnpa.Text != "" && TBprix.Text != "")
             {
 
-                db.connexion("127.0.0.1", "root", "cabanes");
+                db.connexion(server, uid, database, pwd);
 
                 var nom = TBnom.Text;
                 var adresse = TBadresse.Text;
@@ -102,7 +108,7 @@ namespace Cabane
             {
                 for (int y = 0; y < lsbCabanes.SelectedIndices.Count; y++)
                 {
-                    db.connexion("127.0.0.1", "root", "cabanes", "");
+                    db.connexion(server, uid, database, pwd);
 
                     int u = lsbContact.SelectedIndices[i];
                     string idContact = contacts[u][0];
@@ -111,7 +117,7 @@ namespace Cabane
 
                     if (db.check_contact_cabanes(idContact, idCabane, 1))
                     {
-                        db.connexion("127.0.0.1", "root", "cabanes", "");
+                        db.connexion(server, uid, database, pwd);
                         db.insert_contact_cabanes(idContact, idCabane);
                     }
                 }
@@ -124,7 +130,7 @@ namespace Cabane
         {
 
 
-            db.connexion("127.0.0.1", "root", "cabanes", "");
+            db.connexion(server, uid, database, pwd);
             contacts = db.list_contacts();
             for (int i = 0; i < contacts.Count(); i++)
             {
@@ -132,7 +138,7 @@ namespace Cabane
             }
             db.fermer();
 
-            db.connexion("127.0.0.1", "root", "cabanes", "");
+            db.connexion(server, uid, database, pwd);
             cabanes = db.list_cabanes();
             for (int i = 0; i < cabanes.Count(); i++)
             {
@@ -148,7 +154,7 @@ namespace Cabane
             {
                 for (int y = 0; y < lsbContact.SelectedIndices.Count; y++)
                 {
-                    db.connexion("127.0.0.1", "root", "cabanes", "");
+                    db.connexion(server, uid, database, pwd);
 
                     int u = lsbCabanes.SelectedIndices[i];
                     string idCabane = cabanes[u][0];
@@ -157,16 +163,11 @@ namespace Cabane
 
                     if (db.check_contact_cabanes(idContact, idCabane, 0))
                     {
-                        db.connexion("127.0.0.1", "root", "cabanes", "");
+                        db.connexion(server, uid, database, pwd);
                         db.insert_contact_cabanes(idContact, idCabane);
                     }
                 }
             }
-        }
-
-        private void lsbCabanes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FrmGestionCabane.ActiveForm.Text = lsbCabanes.SelectedItems.Count.ToString();
         }
     }
 }

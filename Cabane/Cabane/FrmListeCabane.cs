@@ -21,7 +21,8 @@ namespace Cabane
             InitializeComponent();
 
             server = "127.0.0.1";
-            uid = "root";
+            uid = "cabaneAdmin";
+            pwd = "groupB";
             database = "cabanes";
 
             lbxCabanes.Items.Clear();
@@ -29,7 +30,7 @@ namespace Cabane
             int i = 0;
            
 
-            db.connexion(server, uid, database);
+            db.connexion(server, uid, database, pwd);
             str = db.List_nom_cabannes();
             db.fermer();
 
@@ -68,7 +69,7 @@ namespace Cabane
             int i = 0;
 
 
-            db.connexion(server, uid, database);
+            db.connexion(server, uid, database, pwd);
             search = db.SearchCabane(tbxRecherche.Text);
             db.fermer();
 
