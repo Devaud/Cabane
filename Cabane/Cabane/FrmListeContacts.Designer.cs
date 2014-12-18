@@ -154,6 +154,7 @@
             this.Name = "FrmContacts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contacts";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmContacts_FormClosed);
             this.Load += new System.EventHandler(this.FrmContacts_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -64,7 +64,7 @@ namespace Cabane
 
         private void FrmGestionCabane_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Owner.Show();
+            Application.Exit();
         }
 
 

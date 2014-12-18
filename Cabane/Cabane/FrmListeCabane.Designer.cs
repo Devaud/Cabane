@@ -93,13 +93,13 @@
             // deconnexionToolStripMenuItem
             // 
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deconnexionToolStripMenuItem.Text = "Deconnexion";
             // 
             // quitterToolStripMenuItem1
             // 
             this.quitterToolStripMenuItem1.Name = "quitterToolStripMenuItem1";
-            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.quitterToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.quitterToolStripMenuItem1.Text = "Quitter";
             this.quitterToolStripMenuItem1.Click += new System.EventHandler(this.quitterToolStripMenuItem1_Click);
             // 
@@ -192,6 +192,7 @@
             this.Name = "FrmListeCabane";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste des cabanes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmListeCabane_FormClosed);
             this.Load += new System.EventHandler(this.FrmListeCabane_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

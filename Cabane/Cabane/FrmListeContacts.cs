@@ -59,5 +59,10 @@ namespace Cabane
             Application.Exit();
         }
 
+        private void FrmContacts_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

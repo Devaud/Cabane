@@ -124,5 +124,10 @@ namespace Cabane
         {
             Application.Exit();
         }
+
+        private void FrmCreerContact_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

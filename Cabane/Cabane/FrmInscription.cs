@@ -115,5 +115,10 @@ namespace Cabane
             cabane.Show(this);
             this.Hide();
         }
+
+        private void FrmInscription_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

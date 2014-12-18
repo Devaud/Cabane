@@ -105,5 +105,10 @@ namespace Cabane
         {
             Application.Exit();
         }
+
+        private void FrmListeCabane_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
