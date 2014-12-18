@@ -74,7 +74,9 @@ namespace Cabane
          * */
         private void BtnAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close(); // Close this window
+            FrmCabane cabane = new FrmCabane();
+            cabane.Show(this);
+            this.Hide();
         } 
 
         /**
