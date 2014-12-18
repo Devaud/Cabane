@@ -104,7 +104,6 @@
             this.lblEmail.TabIndex = 5;
             this.lblEmail.Text = "Email :";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblTel
             // 
@@ -260,7 +259,6 @@
             this.Name = "FrmInscription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inscription";
-            this.Load += new System.EventHandler(this.FrmInscription_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -12,17 +12,20 @@ namespace Cabane
 {
     public partial class FrmInscription : Form
     {
+        // Global variable
         string server, uid, database, pwd;
-        List<TextBox> TBXList = new List<TextBox>();
+        List<TextBox> TBXList = new List<TextBox>(); // List of textbox
 
         public FrmInscription()
         {
             InitializeComponent();
 
+            // Initialize server info
             server = "127.0.0.1";
             uid = "root";
             database = "cabanes";
-
+            
+            // Add Item in the list
             TBXList.Add(TBXNom);
             TBXList.Add(TBXPseudo);
             TBXList.Add(TBXPrenom);
@@ -33,53 +36,61 @@ namespace Cabane
 
         }
 
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /**
+         * Action button validation
+         * @param object sender Object wich call this function
+         * @param EventArgs e
+         * */
         private void BtnValider_Click(object sender, EventArgs e)
         {
+            // Create object for db
             manipdb db = new manipdb();
-            string nom, prenom, pseudo, mdp, mdp2, email, telephone;
+            string lastname, firstname, pseudo, pwd, pwd2, email, tel;
 
-            nom = TBXNom.Text;
-            prenom = TBXPrenom.Text;
+            // Initialize variable
+            lastname = TBXNom.Text;
+            firstname = TBXPrenom.Text;
             pseudo = TBXPseudo.Text;
-            mdp = TBXMDP.Text;
-            mdp2 = TBXValideMDP.Text;
+            pwd = TBXMDP.Text;
+            pwd2 = TBXValideMDP.Text;
             email = TBXEmail.Text;
-            telephone = TBXTel.Text;
+            tel = TBXTel.Text;
 
-            if (mdp == mdp2)
+            // Password verifiaction.
+            if (pwd == pwd2)
             {
-                db.connexion(server, uid, database);
-                db.setUser(prenom, nom, pseudo, mdp, email, telephone);
-                db.fermer();
+                db.connexion(server, uid, database); // Create connection
+                db.setUser(firstname, lastname, pseudo, pwd, email, tel); // Execute request
+                db.fermer(); // Close db
 
-                this.Close();
+                this.Close(); // Close this window
             }
         }
 
+        /**
+         * Action button cancel
+         * @param object sender Object which call this function
+         * @param EventArgs e
+         * */
         private void BtnAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            this.Close(); // Close this window
+        } 
 
-        private void FrmInscription_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        /**
+         * Event when an edit change
+         * @param object sender Object which call this function
+         * @parma EventArgs e
+         * */
         private void TBXPrenom_TextChanged(object sender, EventArgs e)
         {
-            // Récupère le nombre d'élément se trouvant dans la liste
+            // Count items in list
             int ListSize = TBXList.Count;
 
-            // Boucle pour parcourir tout les éléments de la liste
+            //Read all items in the list
             for (int i = 0; i < ListSize; i++)
             {
-                TextBox tbx = TBXList[i]; // Récupère l'élément à la position i
+                TextBox tbx = TBXList[i]; // Keep the item which pos. at i
                 if (tbx.Text == "")
                 {
                     BtnValider.Enabled = false;

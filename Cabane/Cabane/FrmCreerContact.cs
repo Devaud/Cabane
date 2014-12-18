@@ -12,17 +12,23 @@ namespace Cabane
 {
     public partial class FrmCreerContact : Form
     {
+        // global variable
         string server, uid, database;
         List<TextBox> TBXList = new List<TextBox>();
 
+        /**
+         * Constructor
+         * */
         public FrmCreerContact()
         {
             InitializeComponent();
 
+            // Initialize variable
             server = "127.0.0.1";
             uid = "root";
             database = "cabanes";
 
+            // Add item in the list
             TBXList.Add(TBXNom);
             TBXList.Add(TBXPrenom);
             TBXList.Add(TBXEmail);
@@ -30,61 +36,67 @@ namespace Cabane
 
         }
 
+        /**
+         * Event button add
+         * @param Object sender object which call this event
+         * @param EventArgs e
+         * */
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
-            // Déclaration et affectation des variables
+            // Initialize variable
             manipdb db = new manipdb();
-            string nom, prenom, email, tel, website;
+            string lastname, firstname, email, tel, website;
 
-            nom = TBXNom.Text;
-            prenom = TBXPrenom.Text;
+            lastname = TBXNom.Text;
+            firstname = TBXPrenom.Text;
             email = TBXEmail.Text;
             tel = TBXTel.Text;
-            website = TBXSiteWeb.Text;
+            website = (TBXSiteWeb.Text == "") ? null : TBXSiteWeb.Text; // Test if website is empty
 
-            if(website == "")
-            {
-                website = null;
-            }
+            
 
-            // Gestion avec la base de données
-            db.connexion(server, uid, database);
-            if (db.addContact(nom, prenom, email, tel, website))
+            // Data base
+            db.connexion(server, uid, database); // Connection with database
+            if (db.addContact(lastname, firstname, email, tel, website)) // Add Contact
             {
-                MessageBox.Show("Contact ajouter avec succès");
+                MessageBox.Show("Contact ajouter avec succès"); // Success Message
+                db.fermer(); // Close stream
+                this.Close(); // Close window
             }
             else
             {
-                MessageBox.Show("Impossible de créer le contact");
+                MessageBox.Show("Impossible de créer le contact"); // Error message
             }
-            db.fermer();
-            
+            db.fermer(); // Close stream
         }
 
+        /**
+         * Event textbox change
+         * @param Object sender object which call this event
+         * @param EventArgs e
+         * */
         private void TBXNom_TextChanged(object sender, EventArgs e)
         {
-            // Récupère le nombre d'élément se trouvant dans la liste
+            // Count item in the list
             int ListSize = TBXList.Count;
 
-            // Boucle pour parcourir tout les éléments de la liste
+            // Check item in the list
             for (int i = 0; i < ListSize; i++)
             {
                 TextBox tbx = TBXList[i]; // Récupère l'élément à la position i
-                if (tbx.Text == "")
-                {
-                    BtnAjouter.Enabled = false;
-                }
-                else
-                {
-                    BtnAjouter.Enabled = true;
-                }
+                BtnAjouter.Enabled = (tbx.Text == "") ? false : true;
             }
             
         }
 
+        /**
+         * Event button cancel
+         * @param Object sender object which call this event
+         * @param EventArgs e
+         * */
         private void BtnAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // close the window
         }
 
         private void listeCabaneToolStripMenuItem_Click(object sender, EventArgs e)
