@@ -95,7 +95,11 @@ namespace Cabane
          * */
         private void BtnAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close(); // close the window
+            TBXNom.Text = "";
+            TBXPrenom.Text = "";
+            TBXEmail.Text = "";
+            TBXTel.Text = "";
+            TBXSiteWeb.Text = "";
         }
 
         private void listeCabaneToolStripMenuItem_Click(object sender, EventArgs e)
