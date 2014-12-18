@@ -199,24 +199,6 @@ namespace Cabane
             return result;
         }
 
-        public bool addContact(string nom, string prenom, string email, string tel, string siteweb = null)
-        {
-            try
-            {
-                SQL = "INSERT INTO contact (nom, prenom, email, telephone, siteWeb) VALUES ('" + nom + "', '" + prenom + "', '" + email + "', '" + tel + "', '" + siteweb + "')";
-                cmd.Connection = this.conn;
-                cmd.CommandText = SQL;
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
-
-                return true;
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                MessageBox.Show("Error " + ex.Number + " has occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
 
         /**
          * List of contact
