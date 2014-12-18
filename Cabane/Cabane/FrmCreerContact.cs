@@ -61,7 +61,6 @@ namespace Cabane
             {
                 MessageBox.Show("Contact ajouter avec succès"); // Success Message
                 db.fermer(); // Close stream
-                this.Close(); // Close window
             }
             else
             {
